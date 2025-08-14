@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Seminar Program</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        /* Base styles for all devices */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* --- NEW: Navigation Bar Styles --- */
+        nav {
+            background-color: #002a52; /* A darker shade from the banner */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center; /* Center links on desktop */
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 20px 15px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #0055a5; /* Color from banner gradient */
+        }
+
+        .hamburger-menu {
+            display: none; /* Hidden on desktop */
+            cursor: pointer;
+            padding: 15px;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+        /* --- End of Nav Styles --- */
+
+        .banner {
+            background: linear-gradient(90deg, #003366 60%, #0055a5 100%);
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .logos img {
+            max-height: 70px; 
+            background: #fff;
+            border-radius: 8px;
+            padding: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            width: auto; /* Maintain aspect ratio */
+        }
+        
+        .banner h1 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin: 15px 0 5px 0;
+        }
+
+        .banner h2 {
+            font-size: 1.3rem;
+            margin-top: 5px;
+            color: #e0e0e0;
+            font-weight: normal;
+        }
+        
+        .banner h3 {
+            font-size: 1.1rem;
+            margin-top: 5px;
+            color: #d0d0d0;
+            font-weight: normal;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            text-align: justify;
+        }
+
+        .content h2 {
+            font-size: 1.5rem;
+            color: #003366;
+        }
+
+        /* Tablet styles (screen width 768px to 1024px) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .logos img {
+                max-height: 60px;
+            }
+            .banner h1 {
+                font-size: 2rem;
+            }
+            .banner h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Mobile styles (screen width up to 767px) */
+        @media (max-width: 767px) {
+            /* --- NEW: Mobile Navigation Styles --- */
+            nav {
+                justify-content: flex-end; /* Align hamburger to the right */
+            }
+
+            .nav-links {
+                flex-direction: column;
+                position: absolute;
+                top: 60px; /* Position below the nav bar */
+                left: 0;
+                width: 100%;
+                background-color: #002a52;
+                transform: translateX(-100%); /* Hide off-screen */
+                transition: transform 0.3s ease-in-out;
+                padding: 0;
+                gap: 0;
+            }
+
+            /* This class is toggled by JavaScript to show/hide the menu */
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .nav-links li {
+                text-align: center;
+                border-bottom: 1px solid #003366;
+            }
+
+            .nav-links a {
+                padding: 15px;
+            }
+
+            .hamburger-menu {
+                display: block; /* Show hamburger on mobile */
+            }
+            /* --- End of Mobile Nav Styles --- */
+            
+            .logos {
+                flex-direction: column; /* Stack logos vertically */
+                gap: 15px;
+            }
+            
+            .logos img {
+                max-height: 50px; 
+            }
+            
+            .banner h1 {
+                font-size: 1.5rem;
+            }
+
+            .banner h2 {
+                font-size: 1rem;
+            }
+            
+            .banner h3 {
+                font-size: 0.9rem;
+            }
+            
+            .content {
+                margin: 20px 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="themes.html">Themes</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="venue.html">Venue</a></li>
+        </ul>
+    </nav>
+
+    <header class="banner">
+        <div class="logos">
+            <img src="images/ss.png" alt="School of Social Sciences Logo">
+            <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
+            <img src="images/anthro.png" alt="Department of Anthropology Logo">
+        </div>
+        <h2>University of Hyderabad</h2>
+        <h3>School of Social Sciences</h3>
+        <h3>Department of Anthropology</h3>
+        <h1>Anthropology in Contemporary Practice: Pathways for a Sustainable Future(September 26-27, 2025)</h1>
+    </header>
+
+    <main>
+        <div class="content">
+            <h2>Venue</h2>
+            <p>
+                Anthropology today engages with health inequities, educational transformation, 
+                environmental risk, digital life, urban change, and heritage futures. 
+                This seminar brings together scholars, practitioners, policymakers, and 
+                communities to foster problem-focused knowledge and strengthen university-society linkages.
+            </p>
+            <ul>
+                <li><strong>Date:</strong> 26-27 September 2025</li>
+                <li><strong>Venue:</strong> Seminar Hall, University of Hyderabad</li>
+                <li><strong>Time:</strong> 10:00 AM - 4:00 PM</li>
+            </ul>
+        </div>
+
+        <footer class="content" style="text-align: center;">
+            <p>&copy; 2025 University of Hyderabad. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

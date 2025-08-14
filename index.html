@@ -7,6 +7,9 @@
     
     <style>
         /* Base styles for all devices */
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling for nav links */
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -122,21 +125,78 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-            text-align: justify;
         }
 
         .content h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #003366;
+            border-bottom: 2px solid #0055a5;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .content h3 {
+            font-size: 1.3rem;
+            color: #003366;
+            margin-top: 25px;
+        }
+        .content ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+        .content li {
+            margin-bottom: 10px;
         }
 
-        /* --- NEW: Footer Styles --- */
+        /* --- STYLES FOR NEW SECTIONS --- */
+        .button {
+            display: inline-block;
+            background-color: #0055a5;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .theme-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* --- Footer Styles --- */
         .site-footer {
-            background-color: #333; /* Dark background for footer */
-            color: #ccc; /* Light grey text color */
+            background-color: #333;
+            color: #ccc;
             text-align: center;
             padding: 25px 20px;
-            margin-top: auto; /* Pushes footer to the bottom */
+            margin-top: auto;
         }
 
         .site-footer p {
@@ -148,11 +208,9 @@
             color: #fff;
             text-decoration: none;
         }
-
         .site-footer a:hover {
             text-decoration: underline;
         }
-        /* --- End of Footer Styles --- */
 
         /* Tablet styles */
         @media (min-width: 768px) and (max-width: 1024px) {
@@ -165,16 +223,9 @@
         @media (max-width: 767px) {
             nav { justify-content: flex-end; }
             .nav-links {
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background-color: #002a52;
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-                padding: 0;
-                gap: 0;
+                flex-direction: column; position: absolute; top: 60px; left: 0;
+                width: 100%; background-color: #002a52; transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out; padding: 0; gap: 0;
             }
             .nav-links.active { transform: translateX(0); }
             .nav-links li { text-align: center; border-bottom: 1px solid #003366; }
@@ -198,15 +249,15 @@
             <span></span>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="themes.html">Themes</a></li>
-            <li><a href="registration.html">Registration</a></li>
-            <li><a href="venue.html">Venue</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#background">About</a></li>
+            <li><a href="#themes">Themes</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#venue-info">Venue</a></li>
         </ul>
     </nav>
 
-    <header class="banner">
+    <header class="banner" id="home">
         <div class="logos">
             <img src="images/ss.png" alt="School of Social Sciences Logo">
             <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
@@ -219,24 +270,133 @@
     </header>
 
     <main>
-        <div class="content">
-            <h2>About the Seminar</h2>
-            <p>
-                Anthropology today engages with health inequities, educational transformation, 
-                environmental risk, digital life, urban change, and heritage futures. 
-                This seminar brings together scholars, practitioners, policymakers, and 
-                communities to foster problem-focused knowledge and strengthen university-society linkages.
-            </p>
+        <section id="background" class="content">
+            <h2>Background & Rationale</h2>
+            <p>Anthropology today engages with health inequities, educational transformation, environmental risk, digital life, urban change, and heritage futures. This seminar brings together scholars, practitioners, policymakers, and communities to foster problem-focused knowledge and strengthen university-society linkages.</p>
+            <a href="path/to/your-concept-note.pdf" class="button" target="_blank" download>Read Full Concept Note</a>
+        </section>
+
+        <section id="objectives" class="content">
+            <h2>Objectives</h2>
             <ul>
-                <li><strong>Date:</strong> 26-27 September 2025</li>
-                <li><strong>Venue:</strong> Seminar Hall, University of Hyderabad</li>
-                <li><strong>Time:</strong> 10:00 AM - 4:00 PM</li>
+                <li>💡 Convene diverse stakeholders to examine anthropological perspectives on contemporary challenges.</li>
+                <li>🤝 Surface actionable insights, methods, and collaborations.</li>
+                <li>🎓 Create avenues for student learning, practitioner exchange, and community voice.</li>
             </ul>
-        </div>
+        </section>
+
+        <section id="themes" class="content">
+            <h2>Sub-Themes & Indicative Focus</h2>
+            <p>Participants are invited to contribute within these areas:</p>
+            <div class="theme-grid">
+                <div class="theme-card"><h3>Medicine & Health</h3></div>
+                <div class="theme-card"><h3>Education & Social Transformation</h3></div>
+                <div class="theme-card"><h3>Applied Anthropology</h3></div>
+                <div class="theme-card"><h3>Development, SDGs, & Policy</h3></div>
+                <div class="theme-card"><h3>Digital Space & Ethnography</h3></div>
+                <div class="theme-card"><h3>Urban Dynamics</h3></div>
+                <div class="theme-card"><h3>Environment & Climate Change</h3></div>
+                <div class="theme-card"><h3>Gender in Practice</h3></div>
+                <div class="theme-card"><h3>Museums, Heritage & Arts</h3></div>
+                <div class="theme-card"><h3>Open Theme</h3></div>
+            </div>
+        </section>
+
+        <section id="dates" class="content">
+            <h2>Important Dates (2025)</h2>
+            <table>
+                <thead>
+                    <tr><th>Event</th><th>Date</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Abstract Submission Opens</td><td><strong>15 August</strong></td></tr>
+                    <tr><td>Abstract Submission Deadline</td><td class="highlight">25 August</td></tr>
+                    <tr><td>Notification of Acceptance</td><td>28 August</td></tr>
+                    <tr><td>Full Paper Deadline</td><td>15 September</td></tr>
+                    <tr><td>Registration Opens</td><td>28 August</td></tr>
+                    <tr><td>Final Registration Deadline</td><td>24 September</td></tr>
+                    <tr><td>Spot Registration</td><td>26 September</td></tr>
+                    <tr><td>Conference Dates</td><td><strong>26–27 September</strong></td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="registration" class="content">
+            <h2>Registration</h2>
+            <h3>Registration Fees</h3>
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>Fee (₹)</th><th>Spot Registration Fee (₹)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Faculty/Practitioners/Professionals</td><td>1000</td><td>2000</td></tr>
+                    <tr><td>Research Scholars</td><td>700</td><td>1500</td></tr>
+                    <tr><td>UG/PG Students</td><td>500</td><td>1500</td></tr>
+                </tbody>
+            </table>
+            <p><strong>Inclusions:</strong> Conference materials, tea/coffee, lunch, and a participation certificate.</p>
+            <h3>Payment Details & Registration Form</h3>
+            <p>Please complete your payment using the details below and then fill out the registration form.</p>
+            <details>
+                <summary><strong>Click here for Bank Account & UPI Details</strong></summary>
+                <p><strong>Account Name:</strong> [Your Account Name]</p>
+                <p><strong>Account Number:</strong> [Your Account Number]</p>
+                <p><strong>Bank:</strong> [Your Bank Name]</p>
+                <p><strong>IFSC Code:</strong> [Your IFSC Code]</p>
+                <p><strong>UPI ID:</strong> [your-upi-id@okhdfcbank]</p>
+            </details>
+            <a href="https://docs.google.com/forms/your-google-form-link" class="button" target="_blank">Register Now</a>
+        </section>
+        
+        <section id="venue-info" class="content">
+             <h2>Venue</h2>
+             <p>The seminar will be held at the main Seminar Hall at the University of Hyderabad. More details about travel and accommodation will be provided soon.</p>
+        </section>
+
+
+        <section id="audience" class="content">
+            <h2>Who Should Attend?</h2>
+            <ul>
+                <li>Researchers and Academics</li>
+                <li>Policymakers and Government Officials</li>
+                <li>Postgraduate and Research Students</li>
+                <li>Practitioners from NGOs and CSOs</li>
+                <li>Corporate and Industry Professionals</li>
+            </ul>
+            <h3>Participation Formats</h3>
+            <ul>
+                <li><strong>Academic:</strong> Research papers and posters.</li>
+                <li><strong>NGOs/CSOs:</strong> Case studies and field reports.</li>
+                <li><strong>Policymakers:</strong> Policy briefs and discussion notes.</li>
+                <li><strong>Students:</strong> Special presentation awards for outstanding student papers.</li>
+            </ul>
+        </section>
+
+        <section id="organizers" class="content">
+            <h2>Organizing Team</h2>
+            <h3>Conveners</h3>
+            <ul><li>[Convener Name 1], [Title]</li><li>[Convener Name 2], [Title]</li></ul>
+            <h3>Advisory Committee</h3>
+            <ul><li>[Member Name], [Affiliation]</li><li>[Member Name], [Affiliation]</li></ul>
+            <h3>Contact Us</h3>
+            <p>For all inquiries, please email us at <a href="mailto:anthropology.aicp2025@uohyd.ac.in">anthropology.aicp2025@uohyd.ac.in</a>.</p>
+            <p><strong>Student Convenors:</strong> [Student Name] & [Student Name] are available for support.</p>
+        </section>
+
+        <section id="outcomes" class="content">
+            <h2>Expected Outcomes & Publication</h2>
+            <ul>
+                <li>A curated collection of papers will form the basis for an edited volume.</li>
+                <li>Fostering of new interdisciplinary collaborations and networks.</li>
+                <li>Creation of a proceedings volume with abstracts and key insights.</li>
+            </ul>
+            <p><strong>Publication:</strong> Selected full papers presented at the conference will be considered for publication in the conference proceedings.</p>
+        </section>
+
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/">Prashanth</a></p>
+        <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank">Prashanth</a></p>
         <p>For any queries, contact us at <a href="mailto:seminar.anthro@uoh.ac.in">seminar.anthro@uoh.ac.in</a></p>
     </footer>
 

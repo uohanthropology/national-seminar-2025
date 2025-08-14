@@ -13,16 +13,23 @@
             background: #f5f5f5;
             line-height: 1.6;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* --- NEW: Navigation Bar Styles --- */
+        main {
+            flex: 1; /* Ensures the main content pushes the footer down */
+        }
+
+        /* --- Navigation Bar Styles --- */
         nav {
-            background-color: #002a52; /* A darker shade from the banner */
+            background-color: #002a52;
             position: sticky;
             top: 0;
             z-index: 1000;
             display: flex;
-            justify-content: center; /* Center links on desktop */
+            justify-content: center;
             align-items: center;
             height: 60px;
         }
@@ -45,11 +52,11 @@
         }
 
         .nav-links a:hover {
-            background-color: #0055a5; /* Color from banner gradient */
+            background-color: #0055a5;
         }
 
         .hamburger-menu {
-            display: none; /* Hidden on desktop */
+            display: none;
             cursor: pointer;
             padding: 15px;
         }
@@ -62,7 +69,6 @@
             background-color: #fff;
             transition: all 0.3s ease-in-out;
         }
-        /* --- End of Nav Styles --- */
 
         .banner {
             background: linear-gradient(90deg, #003366 60%, #0055a5 100%);
@@ -85,7 +91,7 @@
             border-radius: 8px;
             padding: 5px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            width: auto; /* Maintain aspect ratio */
+            width: auto;
         }
         
         .banner h1 {
@@ -124,83 +130,62 @@
             color: #003366;
         }
 
-        /* Tablet styles (screen width 768px to 1024px) */
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .logos img {
-                max-height: 60px;
-            }
-            .banner h1 {
-                font-size: 2rem;
-            }
-            .banner h2 {
-                font-size: 1.2rem;
-            }
+        /* --- NEW: Footer Styles --- */
+        .site-footer {
+            background-color: #333; /* Dark background for footer */
+            color: #ccc; /* Light grey text color */
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: auto; /* Pushes footer to the bottom */
         }
 
-        /* Mobile styles (screen width up to 767px) */
-        @media (max-width: 767px) {
-            /* --- NEW: Mobile Navigation Styles --- */
-            nav {
-                justify-content: flex-end; /* Align hamburger to the right */
-            }
+        .site-footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        
+        .site-footer a {
+            color: #fff;
+            text-decoration: none;
+        }
 
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+        /* --- End of Footer Styles --- */
+
+        /* Tablet styles */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .logos img { max-height: 60px; }
+            .banner h1 { font-size: 2rem; }
+            .banner h2 { font-size: 1.2rem; }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 767px) {
+            nav { justify-content: flex-end; }
             .nav-links {
                 flex-direction: column;
                 position: absolute;
-                top: 60px; /* Position below the nav bar */
+                top: 60px;
                 left: 0;
                 width: 100%;
                 background-color: #002a52;
-                transform: translateX(-100%); /* Hide off-screen */
+                transform: translateX(-100%);
                 transition: transform 0.3s ease-in-out;
                 padding: 0;
                 gap: 0;
             }
-
-            /* This class is toggled by JavaScript to show/hide the menu */
-            .nav-links.active {
-                transform: translateX(0);
-            }
-
-            .nav-links li {
-                text-align: center;
-                border-bottom: 1px solid #003366;
-            }
-
-            .nav-links a {
-                padding: 15px;
-            }
-
-            .hamburger-menu {
-                display: block; /* Show hamburger on mobile */
-            }
-            /* --- End of Mobile Nav Styles --- */
-            
-            .logos {
-                flex-direction: column; /* Stack logos vertically */
-                gap: 15px;
-            }
-            
-            .logos img {
-                max-height: 50px; 
-            }
-            
-            .banner h1 {
-                font-size: 1.5rem;
-            }
-
-            .banner h2 {
-                font-size: 1rem;
-            }
-            
-            .banner h3 {
-                font-size: 0.9rem;
-            }
-            
-            .content {
-                margin: 20px 15px;
-                padding: 20px;
-            }
+            .nav-links.active { transform: translateX(0); }
+            .nav-links li { text-align: center; border-bottom: 1px solid #003366; }
+            .nav-links a { padding: 15px; }
+            .hamburger-menu { display: block; }
+            .logos { flex-direction: column; gap: 15px; }
+            .logos img { max-height: 50px; }
+            .banner h1 { font-size: 1.5rem; }
+            .banner h2 { font-size: 1rem; }
+            .banner h3 { font-size: 0.9rem; }
+            .content { margin: 20px 15px; padding: 20px; }
         }
     </style>
 </head>
@@ -230,12 +215,12 @@
         <h2>University of Hyderabad</h2>
         <h3>School of Social Sciences</h3>
         <h3>Department of Anthropology</h3>
-        <h1>Anthropology in Contemporary Practice: Pathways for a Sustainable Future(September 26-27, 2025)</h1>
+        <h1>Anthropology in Contemporary Practice: Pathways for a Sustainable Future (September 26-27, 2025)</h1>
     </header>
 
     <main>
         <div class="content">
-            <h2>Themes</h2>
+            <h2>About the Seminar</h2>
             <p>
                 Anthropology today engages with health inequities, educational transformation, 
                 environmental risk, digital life, urban change, and heritage futures. 
@@ -248,8 +233,12 @@
                 <li><strong>Time:</strong> 10:00 AM - 4:00 PM</li>
             </ul>
         </div>
-
     </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/">Prashanth</a></p>
+        <p>For any queries, contact us at <a href="mailto:seminar.anthro@uoh.ac.in">seminar.anthro@uoh.ac.in</a></p>
+    </footer>
 
     <script>
         const hamburger = document.querySelector('.hamburger-menu');

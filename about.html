@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <title>University Seminar Program</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo1.png" type="image/png">
     
     <style>
         /* Base styles for all devices */
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling for nav links */
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -122,21 +126,73 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-            text-align: justify;
         }
 
         .content h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #003366;
+            border-bottom: 2px solid #0055a5;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
 
-        /* --- NEW: Footer Styles --- */
+        .content p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .content h3 {
+            font-size: 1.3rem;
+            color: #003366;
+            margin-top: 20px;
+        }
+        .content ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        /* --- STYLES FOR NEW SECTIONS --- */
+        .button {
+            display: inline-block;
+            background-color: #0055a5;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* --- Footer Styles --- */
         .site-footer {
-            background-color: #333; /* Dark background for footer */
-            color: #ccc; /* Light grey text color */
+            background-color: #333;
+            color: #ccc;
             text-align: center;
             padding: 25px 20px;
-            margin-top: auto; /* Pushes footer to the bottom */
+            margin-top: auto;
         }
 
         .site-footer p {
@@ -148,11 +204,9 @@
             color: #fff;
             text-decoration: none;
         }
-
         .site-footer a:hover {
             text-decoration: underline;
         }
-        /* --- End of Footer Styles --- */
 
         /* Tablet styles */
         @media (min-width: 768px) and (max-width: 1024px) {
@@ -163,17 +217,21 @@
 
         /* Mobile styles */
         @media (max-width: 767px) {
-            nav { justify-content: flex-end; }
+            /* Changed nav to space-between for better alignment */
+            nav {
+                justify-content: space-between;
+                padding: 0 15px;
+            }
             .nav-links {
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
+                flex-direction: column; 
+                position: absolute; 
+                top: 60px; 
                 left: 0;
-                width: 100%;
-                background-color: #002a52;
+                width: 100%; 
+                background-color: #002a52; 
                 transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-                padding: 0;
+                transition: transform 0.3s ease-in-out; 
+                padding: 0; 
                 gap: 0;
             }
             .nav-links.active { transform: translateX(0); }
@@ -203,10 +261,11 @@
             <li><a href="themes.html">Themes</a></li>
             <li><a href="registration.html">Registration</a></li>
             <li><a href="venue.html">Venue</a></li>
+            <li><a href="submission.html">Submission</a></li>
         </ul>
     </nav>
 
-    <header class="banner">
+    <header class="banner" id="home">
         <div class="logos">
             <img src="images/ss.png" alt="School of Social Sciences Logo">
             <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
@@ -219,35 +278,108 @@
     </header>
 
     <main>
-        <div class="content">
-            <h2>About the Seminar</h2>
-            <p>
-                Anthropology today engages with health inequities, educational transformation, 
-                environmental risk, digital life, urban change, and heritage futures. 
-                This seminar brings together scholars, practitioners, policymakers, and 
-                communities to foster problem-focused knowledge and strengthen university-society linkages.
-            </p>
+        <section id="background" class="content">
+            <h2>Background & Rationale</h2>
+            <p>Anthropology today engages directly with health inequities, 
+                educational transformation, environmental risk, digital life, urban change, and heritage futures. 
+                Bringing scholars, practitioners, policymakers, and communities into one forum enables problem-focused, 
+                context-sensitive knowledge that can inform policy and practice while strengthening university–society linkages. 
+                This concept note is derived from the final public note issued by the organising team.</p>
+        </section>
+
+        <section id="objectives" class="content">
+            <h2>Objectives</h2>
             <ul>
-                <li><strong>Date:</strong> 26-27 September 2025</li>
-                <li><strong>Venue:</strong> Seminar Hall, University of Hyderabad</li>
-                <li><strong>Time:</strong> 10:00 AM - 4:00 PM</li>
+                <li>Diverse stakeholders to examine how anthropological perspectives and methods address contemporary societal challenges across education, health, environment, technology, and urban development.</li>  
+                <li>Surface actionable insights, methods, and collaborations for field programmes, teaching, and policy engagement.</li>
+                <li>Create avenues for student learning, practitioner exchange, and community voice.</li>
             </ul>
-        </div>
+            <a href="themes.html" class="button">Themes</a>
+        </section>
+
+        <section id="university-info" class="content">
+            <h2>University of Hyderabad</h2>
+            <div class="image-container">
+                <img src="images/Main-Gate_Cover-1080x640.jpeg" alt="UOH" style="width:100%; height:auto; border-radius: 10px;">
+            </div>
+            <p>The University of Hyderabad (UoH) is a prestigious public central research university 
+                established in 1974 by an Act of Parliament as part of the Six-Point Formula to address 
+                regional educational disparities. Located in Gachibowli, Hyderabad, Telangana, this 
+                residential campus spans 2,300 acres and hosts over 5,000 students and 400 faculty members 
+                across various disciplines. The university began its journey at 'The Golden Threshold,' 
+                a historic Indo-European architectural estate bequeathed by Sarojini Naidu's family, 
+                before moving to its current sprawling campus. UoH is widely recognized for its excellence 
+                in research and distinguished faculty, offering close to 120 different programs through 
+                40+ departments and centers organized in 12 schools of study.</p>
+        </section>
+
+        <section id="school-info" class="content">
+            <h2>School of Social Sciences</h2>
+            <div class="image-container">
+                <img src="images/ss1.jpg" alt="School of Social Sciences" style="width:100%; height:auto; border-radius: 10px;">
+            </div>
+            <p>The School of Social Sciences at the University of Hyderabad houses several distinguished 
+                departments, with the Departments of Political Science and Sociology receiving recognition 
+                from the University Grants Commission for the Special Assistance Programme. The school 
+                features specialized facilities including an Archival Cell supported by the UGC under 
+                the Department of History for preserving rare manuscripts, and all departments are equipped 
+                with modern email and internet facilities. Beginning in 2007-2008, the school launched 
+                a Five Year Integrated Programme in Social Sciences leading to a master's degree.</p>
+        </section>
+        
+        <section id="department-info" class="content">
+            <h2>Department of Anthropology</h2>
+            <div class="image-container">
+                <img src="images/Anthropology_Museum.jpg" alt="Department of Anthropology" style="width:100%; height:auto; border-radius: 10px;">
+            </div>
+            <p>The Department of Anthropology within the School of Social Sciences has developed a museum 
+                as a teaching aid for students, demonstrating its commitment to practical learning approaches. 
+                The department maintains excellent facilities including separate air-conditioned classrooms 
+                for M.A. and research students, equipped with speakers, projectors for presentations, 
+                documentaries, and electronic whiteboards. The department offers expertise across various 
+                specializations including Social Anthropology, Medical Anthropology, Applied Anthropology, 
+                Kinship Studies, Theories of Culture, and Educational Anthropology, reflecting its 
+                comprehensive approach to anthropological education and research.</p>
+        </section>
+
+        <section id="venue-info" class="content">
+            <h2>Venue</h2>
+            <div class="image-container">
+                <img src="images/zakir.jpg" alt="Department of Anthropology" style="width:100%; height:auto; border-radius: 10px;">
+            </div>
+            <p>The seminar will be held at the main Seminar Hall at the University of Hyderabad.</p>
+            <p><strong>September 26-27, 2025 at Zakir Husain Hall, University of Hyderabad</strong></p>
+        </section>
+
+        <section id="contact" class="content">
+            <h2>Contact</h2>
+            <p>For any queries, please contact:</p>
+            <p><strong>Email:</strong> <a href="mailto:seminar.anthro@uoh.ac.in">seminar.anthro@uoh.ac.in</a></p>
+        </section>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/">Prashanth</a></p>
+        <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
         <p>For any queries, contact us at <a href="mailto:seminar.anthro@uoh.ac.in">seminar.anthro@uoh.ac.in</a></p>
     </footer>
 
     <script>
         const hamburger = document.querySelector('.hamburger-menu');
         const navLinks = document.querySelector('.nav-links');
+        const navLinksArray = document.querySelectorAll('.nav-links a'); // Select all nav links
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
-    </script>
 
+        // Add a click listener to each navigation link to close the menu on click
+        navLinksArray.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
+
+

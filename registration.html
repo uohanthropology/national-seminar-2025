@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <title>University Seminar Program</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo1.png" type="image/png">
     
     <style>
         /* Base styles for all devices */
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling for nav links */
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -122,21 +126,73 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-            text-align: justify;
         }
 
         .content h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #003366;
+            border-bottom: 2px solid #0055a5;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
 
-        /* --- NEW: Footer Styles --- */
+        .content p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .content h3 {
+            font-size: 1.3rem;
+            color: #003366;
+            margin-top: 20px;
+        }
+        .content ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        /* --- STYLES FOR NEW SECTIONS --- */
+        .button {
+            display: inline-block;
+            background-color: #0055a5;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* --- Footer Styles --- */
         .site-footer {
-            background-color: #333; /* Dark background for footer */
-            color: #ccc; /* Light grey text color */
+            background-color: #333;
+            color: #ccc;
             text-align: center;
             padding: 25px 20px;
-            margin-top: auto; /* Pushes footer to the bottom */
+            margin-top: auto;
         }
 
         .site-footer p {
@@ -148,11 +204,9 @@
             color: #fff;
             text-decoration: none;
         }
-
         .site-footer a:hover {
             text-decoration: underline;
         }
-        /* --- End of Footer Styles --- */
 
         /* Tablet styles */
         @media (min-width: 768px) and (max-width: 1024px) {
@@ -163,17 +217,21 @@
 
         /* Mobile styles */
         @media (max-width: 767px) {
-            nav { justify-content: flex-end; }
+            /* Changed nav to space-between for better alignment */
+            nav {
+                justify-content: space-between;
+                padding: 0 15px;
+            }
             .nav-links {
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
+                flex-direction: column; 
+                position: absolute; 
+                top: 60px; 
                 left: 0;
-                width: 100%;
-                background-color: #002a52;
+                width: 100%; 
+                background-color: #002a52; 
                 transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out;
-                padding: 0;
+                transition: transform 0.3s ease-in-out; 
+                padding: 0; 
                 gap: 0;
             }
             .nav-links.active { transform: translateX(0); }
@@ -203,10 +261,11 @@
             <li><a href="themes.html">Themes</a></li>
             <li><a href="registration.html">Registration</a></li>
             <li><a href="venue.html">Venue</a></li>
+            <li><a href="submission.html">Submission</a></li>
         </ul>
     </nav>
 
-    <header class="banner">
+    <header class="banner" id="home">
         <div class="logos">
             <img src="images/ss.png" alt="School of Social Sciences Logo">
             <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
@@ -219,35 +278,61 @@
     </header>
 
     <main>
-        <div class="content">
-            <h2>About the Seminar</h2>
-            <p>
-                Anthropology today engages with health inequities, educational transformation, 
-                environmental risk, digital life, urban change, and heritage futures. 
-                This seminar brings together scholars, practitioners, policymakers, and 
-                communities to foster problem-focused knowledge and strengthen university-society linkages.
-            </p>
-            <ul>
-                <li><strong>Date:</strong> 26-27 September 2025</li>
-                <li><strong>Venue:</strong> Seminar Hall, University of Hyderabad</li>
-                <li><strong>Time:</strong> 10:00 AM - 4:00 PM</li>
-            </ul>
-        </div>
+        <section id="registration" class="content">
+            <h2>Registration</h2>
+            <h3>Registration Fees</h3>
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>Fee (₹)</th><th>Spot Registration Fee (₹)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Faculty/Practitioners/Professionals</td><td>1000</td><td>2000</td></tr>
+                    <tr><td>Research Scholars</td><td>700</td><td>1500</td></tr>
+                    <tr><td>UG/PG Students</td><td>500</td><td>1500</td></tr>
+                </tbody>
+            </table>
+            <p><strong>Inclusions:</strong> Conference materials, tea/coffee, lunch, and a participation certificate.</p>
+            <p><strong>Note:</strong> Registration is mandatory for all participants. Spot registration is available on the day of the seminar.</p>
+            <p><strong>Accommodation</strong> details can will be informed soon...!</p>
+            <h3>Payment Details & Registration Form</h3>
+            <p>Please complete your payment using the details below and then fill out the registration form.</p>
+            <details>
+                <summary><strong>Click here for Bank Account & UPI Details</strong></summary>
+                <p><strong>Account Name:</strong> UOH-MISC PROGRAMS</p>
+                <p><strong>Account Number:</strong> 40486881928</p>
+                <p><strong>Bank:</strong> State Bank of India, HUC Branch, Hyderabad University Campus, Gachibowli-500046</p>
+                <p><strong>IFSC Code:</strong> SBIN0005916</p>
+                <p><strong>MICR No:</strong> 50000206 | <strong>MICR No:</strong> SBININBB214 </p>
+                <img src="images/upi-logo.png" style="height: 30px;">
+                <p><Strong>Merchent Name:</Strong> UOH UGC SCHEMES</p>
+                <p><strong>UPI ID:</strong> 40486881928@SBI</p>
+                <p>Scan the QR code below to pay.</p>
+                <img src="images/image.png">
+            </details>
+            <a href="https://forms.gle/LKAnkZwxeKrkWEkE7" class="button" target="_blank">Participant Registration</a> <a href="https://forms.gle/jcuipqYhSxqr6oyw6" class="button" target="_blank">Presenter Registration(Paper / Poster)</a>
+        </section>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/">Prashanth</a></p>
+        <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
         <p>For any queries, contact us at <a href="mailto:seminar.anthro@uoh.ac.in">seminar.anthro@uoh.ac.in</a></p>
     </footer>
 
     <script>
         const hamburger = document.querySelector('.hamburger-menu');
         const navLinks = document.querySelector('.nav-links');
+        const navLinksArray = document.querySelectorAll('.nav-links a'); // Select all nav links
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
-    </script>
 
+        // Add a click listener to each navigation link to close the menu on click
+        navLinksArray.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

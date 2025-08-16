@@ -5,251 +5,18 @@
     <title>University Seminar Program</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo1.png" type="image/png">
-    
-    <style>
-        /* Base styles for all devices */
-        html {
-            scroll-behavior: smooth; /* Enables smooth scrolling for nav links */
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-            line-height: 1.6;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        main {
-            flex: 1; /* Ensures the main content pushes the footer down */
-        }
-
-        /* --- Navigation Bar Styles --- */
-        nav {
-            background-color: #002a52;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 60px;
-        }
-
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 15px;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 20px 15px;
-            display: block;
-            transition: background-color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            background-color: #0055a5;
-        }
-
-        .hamburger-menu {
-            display: none;
-            cursor: pointer;
-            padding: 15px;
-        }
-
-        .hamburger-menu span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px 0;
-            background-color: #fff;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .banner {
-            background: linear-gradient(90deg, #003366 60%, #0055a5 100%);
-            color: #fff;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 20px;
-        }
-
-        .logos img {
-            max-height: 70px; 
-            background: #fff;
-            border-radius: 8px;
-            padding: 5px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            width: auto;
-        }
-        
-        .banner h1 {
-            font-size: 2.2rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin: 15px 0 5px 0;
-        }
-
-        .banner h2 {
-            font-size: 1.3rem;
-            margin-top: 5px;
-            color: #e0e0e0;
-            font-weight: normal;
-        }
-        
-        .banner h3 {
-            font-size: 1.1rem;
-            margin-top: 5px;
-            color: #d0d0d0;
-            font-weight: normal;
-        }
-
-        .content {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-        }
-
-        .content h2 {
-            font-size: 1.8rem;
-            color: #003366;
-            border-bottom: 2px solid #0055a5;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        .content h3 {
-            font-size: 1.3rem;
-            color: #003366;
-            margin-top: 20px;
-        }
-        .content ul {
-            list-style-position: inside;
-            padding-left: 0;
-        }
-        .content li {
-            margin-bottom: 10px;
-        }
-
-        /* --- STYLES FOR NEW SECTIONS --- */
-        .button {
-            display: inline-block;
-            background-color: #0055a5;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #003366;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .highlight {
-            color: red;
-            font-weight: bold;
-        }
-
-        /* --- Footer Styles --- */
-        .site-footer {
-            background-color: #333;
-            color: #ccc;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: auto;
-        }
-
-        .site-footer p {
-            margin: 5px 0;
-            font-size: 0.9rem;
-        }
-        
-        .site-footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .site-footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Tablet styles */
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .logos img { max-height: 60px; }
-            .banner h1 { font-size: 2rem; }
-            .banner h2 { font-size: 1.2rem; }
-        }
-
-        /* Mobile styles */
-        @media (max-width: 767px) {
-            /* Changed nav to space-between for better alignment */
-            nav {
-                justify-content: space-between;
-                padding: 0 15px;
-            }
-            .nav-links {
-                flex-direction: column; 
-                position: absolute; 
-                top: 60px; 
-                left: 0;
-                width: 100%; 
-                background-color: #002a52; 
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out; 
-                padding: 0; 
-                gap: 0;
-            }
-            .nav-links.active { transform: translateX(0); }
-            .nav-links li { text-align: center; border-bottom: 1px solid #003366; }
-            .nav-links a { padding: 15px; }
-            .hamburger-menu { display: block; }
-            .logos { flex-direction: column; gap: 15px; }
-            .logos img { max-height: 50px; }
-            .banner h1 { font-size: 1.5rem; }
-            .banner h2 { font-size: 1rem; }
-            .banner h3 { font-size: 0.9rem; }
-            .content { margin: 20px 15px; padding: 20px; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/index-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
     <nav>
+        <div class="logos">
+            <img src="images/ss.png" alt="School of Social Sciences Logo">
+            <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
+            <img src="images/anthro.png" alt="Department of Anthropology Logo">
+        </div>
         <div class="hamburger-menu">
             <span></span>
             <span></span>
@@ -266,15 +33,9 @@
     </nav>
 
     <header class="banner" id="home">
-        <div class="logos">
-            <img src="images/ss.png" alt="School of Social Sciences Logo">
-            <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
-            <img src="images/anthro.png" alt="Department of Anthropology Logo">
-        </div>
-        <h2>University of Hyderabad</h2>
-        <h3>School of Social Sciences</h3>
-        <h3>Department of Anthropology</h3>
         <h1>Anthropology in Contemporary Practice: Pathways for a Sustainable Future (September 26-27, 2025)</h1>
+        <h3>University of Hyderabad, Hyderabad</h3>
+        <a href="registration.html">Register Now</a>
     </header>
 
     <main>
@@ -282,85 +43,44 @@
             <img src="images/ss1.jpg" alt="Main Image" style="width:100%; height:auto; border-radius: 10px;">
         </section>
 
-        <section id="objectives" class="content">
-            <h2>Objectives</h2>
-            <p class="intro-paragraph">Join us for the Two-Day National Seminar on Anthropology in Contemporary Practice: 
-                Pathways for a Sustainable Future, hosted by the Department of Anthropology, 
-                University of Hyderabad, on September 26-27, 2025. This interdisciplinary forum 
-                brings together scholars, practitioners, policymakers, and communities to explore 
-                how anthropological insights address pressing challenges in health, education, environment, 
-                technology, urban development, and more. Delve into sub-themes like Medicine & Health, 
-                Digital Ethnography, and Climate Change through research papers, case studies, and 
-                collaborative sessions. Submit abstracts by August 25, 2025, and contribute to actionable 
-                pathways for a resilient society!
-            </p>
+        <section id="conference" class="conference-section">
+            <div class="conference-header">
+                <h2>International Conference</h2>
+                <p class="intro-paragraph">
+                    Join thought leaders, researchers, and cultural custodians in reviving India's unparalleled manuscript
+                    legacy through this 3-day global gathering—blending tradition with technology, and scholarship with vision.
+                </p>
+            </div>
+
+            <div class="conference-details">
+                <div class="detail-box">
+                    <div class="icon">📍</div>
+                    <h3>Where</h3>
+                    <p>Bharat Mandapam,<br> New Delhi</p>
+                </div>
+
+                <div class="detail-box">
+                    <div class="icon">📅</div>
+                    <h3>When</h3>
+                    <p>11–13 September 2025</p>
+                </div>
+            </div>
         </section>
 
-        <section id="themes" class="content">
-            <h2>Sub-Themes & Indicative Focus</h2>
-            <p>Participants are invited to contribute within these areas:</p>
-            <ul>
-                <li>Medicine & Health</li>
-                <li>Education & Social Transformation</li>
-                <li>Applied Anthropology</li>
-                <li>Development, SDGs, & Policy</li>
-                <li>Digital Space & Ethnography</li>
-                <li>Urban Dynamics</li>
-                <li>Environment & Climate Change</li>
-                <li>Gender in Practice</li>
-                <li>Museums, Heritage & Arts</li>
-                <li>Open Theme</li>
-            </ul>
-        </section>
 
         <section id="dates" class="content">
-            <h2>Important Dates (2025)</h2>
+            <h2>Conference Dates (2025)</h2>
             <table>
                 <thead>
                     <tr><th>Event</th><th>Date</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Abstract Submission Opens</td><td><strong>15 August</strong></td></tr>
-                    <tr><td>Abstract Submission Deadline</td><td class="highlight">25 August</td></tr>
-                    <tr><td>Notification of Acceptance</td><td>28 August</td></tr>
-                    <tr><td>Full Paper Deadline</td><td>15 September</td></tr>
-                    <tr><td>Registration Opens</td><td>28 August</td></tr>
-                    <tr><td>Final Registration Deadline</td><td>24 September</td></tr>
-                    <tr><td>Spot Registration</td><td>26 September</td></tr>
                     <tr><td>Conference Dates</td><td><strong>26–27 September</strong></td></tr>
                 </tbody>
             </table>
         </section>
 
-        <section id="registration" class="content">
-            <h2>Registration</h2>
-            <h3>Registration Fees</h3>
-            <table>
-                <thead>
-                    <tr><th>Category</th><th>Fee (₹)</th><th>Spot Registration Fee (₹)</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Faculty/Practitioners/Professionals</td><td>1000</td><td>2000</td></tr>
-                    <tr><td>Research Scholars</td><td>700</td><td>1500</td></tr>
-                    <tr><td>UG/PG Students</td><td>500</td><td>1500</td></tr>
-                </tbody>
-            </table>
-            <p><strong>Inclusions:</strong> Conference materials, tea/coffee, lunch, and a participation certificate.</p>
-            <p><strong>Note:</strong> Registration is mandatory for all participants. Spot registration is available on the day of the seminar.</p>
-            <p><strong>Accomodation</strong> details can find at Registration Tab.</p>
-            <h3>Payment Details & Registration Form</h3>
-            <p>Please complete your payment using the details below and then fill out the registration form.</p>
-            <details>
-                <summary><strong>Click here for Bank Account & UPI Details</strong></summary>
-                <p><strong>Account Name:</strong> [Your Account Name]</p>
-                <p><strong>Account Number:</strong> [Your Account Number]</p>
-                <p><strong>Bank:</strong> [Your Bank Name]</p>
-                <p><strong>IFSC Code:</strong> [Your IFSC Code]</p>
-                <p><strong>UPI ID:</strong> [your-upi-id@okhdfcbank]</p>
-            </details>
-            <a href="registration.html" class="button">Register Now</a>
-        </section>
-
+        
         <section id="audience" class="content">
             <h2>Who Should Attend?</h2>
             <ul>
@@ -387,19 +107,8 @@
         </section>
 
         <section id="outcomes" class="content">
-            <h2>Expected Outcomes & Publication</h2>
-            <ul>
-                <li>A curated collection of papers will form the basis for an edited volume.</li>
-                <li>Fostering of new interdisciplinary collaborations and networks.</li>
-                <li>Creation of a proceedings volume with abstracts and key insights.</li>
-            </ul>
-            <p><strong>Publication:</strong> Selected full papers presented at the conference will be considered for publication in the conference proceedings.</p>
-        </section>
-
-        <section id="outcomes" class="content">
             <h2>Contact</h2>
-            <p>For any queries, please contact:</p>
-            <a href="about.html" class="button">Contact</a>
+            <p>For any queries, please contact: seminar.anthro@uoh.ac.in</p>
         </section>
     </main>
 
@@ -409,20 +118,24 @@
     </footer>
 
     <script>
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navLinks = document.querySelector('.nav-links');
-        const navLinksArray = document.querySelectorAll('.nav-links a'); // Select all nav links
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            const navLinksArray = document.querySelectorAll('.nav-links a');
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
 
-        // Add a click listener to each navigation link to close the menu on click
-        navLinksArray.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
+                navLinksArray.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
         });
     </script>
+
 </body>
 </html>

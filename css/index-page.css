@@ -42,7 +42,7 @@
             color: #fff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 12px; /* slightly larger font */
+            font-size: 15px; /* slightly larger font */
             padding: 10px 15px;
             display: block;
             transition: background-color 0.3s ease;
@@ -76,7 +76,7 @@
         }
 
         .logos img {
-            height: 30px;  /* increase size like in your screenshot */
+            height: 35px;  /* increase size like in your screenshot */
             width: auto;
             background: transparent; /* remove white bg box */
             padding: 0; /* no extra padding */
@@ -377,3 +377,4 @@
             }
 
         }
+

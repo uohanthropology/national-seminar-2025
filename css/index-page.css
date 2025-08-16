@@ -1,0 +1,378 @@
+/* Base styles for all devices */
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling for nav links */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            line-height: 1.6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1; /* Ensures the main content pushes the footer down */
+        }
+
+        /* --- Navigation Bar Styles --- */
+        nav {
+            background-color: #002a52;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between; /* logos left, nav-links right */
+            align-items: center;
+            padding: 0 10px; /* some breathing room */
+            height: 70px; /* taller nav bar for bigger logos */
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px; /* more space between links */
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 10px; /* slightly larger font */
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #0055a5;
+            border-radius: 5px;
+        }
+
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            padding: 15px;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 0; /* remove extra spacing */
+        }
+
+        .logos img {
+            height: 25px;  /* increase size like in your screenshot */
+            width: auto;
+            background: transparent; /* remove white bg box */
+            padding: 0; /* no extra padding */
+            box-shadow: none; /* remove shadow */
+            object-fit: contain;
+        }
+
+        .banner {
+            /*background-image: url('images/banner.jpg') no-repeat center center/cover; /* full cover background */
+            background-color: #3472ac; /* solid color fallback */
+            height: 200px; /* fixed height for the banner */ 
+            color: #fff;
+            padding: 70px 10px;                     /* more padding for space */
+            text-align: center; /* ensure enough height for content */
+            position: relative; /* for z-index stacking */
+            justify-content: center;
+        }
+
+        .banner a {
+            display: inline-block;
+            background-color: #0055a5;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        
+        .banner h1 {
+            font-size: 10px;
+            font-family: 'Mozilla Headline', sans-serif; /* Use custom font */
+            font-size: 2rem;
+            line-height: 1.4;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .banner h2 {
+            font-size: 1.3rem;
+            margin-top: 5px;
+            color: #0f0d0d;
+            font-weight: normal;
+        }
+        
+        .banner h3 {
+            font-family: 'Mozilla Headline', sans-serif; /* Use custom font */
+            font-size: 1.1rem;
+            margin-top: 5px;
+            color: #d0d0d0;
+            font-weight: normal;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            color: #003366;
+            border-bottom: 2px solid #0055a5;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .content h3 {
+            font-size: 1.3rem;
+            color: #003366;
+            margin-top: 20px;
+        }
+        .content ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        /* Flex Container */
+        .conference-section {
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .conference-header h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2b2b2b;
+            margin-bottom: 15px;
+        }
+
+        .conference-header p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .conference-details {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .detail-box {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+        }
+
+        .detail-box .icon {
+            font-size: 2.5rem;
+            color: #b8860b; /* golden color */
+            margin-bottom: 10px;
+        }
+
+        .detail-box h3 {
+            font-size: 1.2rem;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .detail-box p {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        /* --- STYLES FOR NEW SECTIONS --- */
+        .button {
+            display: inline-block;
+            background-color: #0055a5;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* --- Footer Styles --- */
+        .site-footer {
+            background-color: #333;
+            color: #ccc;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: auto;
+        }
+
+        .site-footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        
+        .site-footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Prevent unwanted horizontal scrolling */
+        html, body {
+            overflow-x: hidden;
+        }
+
+        /* Ensure nav doesn’t exceed screen width */
+        nav { overflow: visible; }     /* allow dropdown to show below nav */
+        .nav-links { overflow: visible; }
+
+        /* Ensure images don’t overflow */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        /* Tablet styles */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .logos img { max-height: 60px; }
+            .banner h1 { font-size: 2rem; }
+            .banner h2 { font-size: 1.2rem; }
+        }
+
+        /* Mobile styles */
+        @media (max-width: 767px) {
+            nav {
+                justify-content: space-between;
+                padding: 0 10px;
+                height: 60px; /* keep nav compact */
+            }
+
+            /* Show only the main University logo */
+            .logos img:not(:nth-child(3)) {
+                display: none;
+            }
+
+            .logos img {
+                max-height: 35px; /* nice readable size */
+                width: auto;
+            }
+
+            /* Stack menu vertically when opened */
+            .nav-links {
+                display: none;   /* hidden by default */
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #002a52;
+                padding: 0;
+                gap: 0;
+                z-index: 1001;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                text-align: center;
+                border-bottom: 1px solid #003366;
+            }
+
+            .nav-links a {
+                padding: 15px;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            /* Banner text scaling */
+            .banner {
+                height: auto; /* allow height to adjust based on content */
+                padding: 20px 10px; /* more breathing room */
+            }
+
+            .banner h1 {
+                font-size: 1.1rem;   /* smaller text */
+                line-height: 1.5;   /* more space between lines */
+                padding: 10px 5px; /* breathing room */
+                max-width: 95%;     /* prevent edge-to-edge stretching */
+            }
+
+            .banner h3 {
+                font-size: 1rem;
+            }
+
+            .banner a {
+                font-size: 0.85rem;
+                padding: 8px 12px;
+            }
+
+            /* Content spacing */
+            .content {
+                margin: 15px;
+                padding: 15px;
+                border-radius: 8px;
+            }
+        }

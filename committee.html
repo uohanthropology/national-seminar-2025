@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Seminar Program</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo1.png" type="image/png">
+    <link rel="stylesheet" href="css/committee.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logos">
+            <img src="images/ss.png" alt="School of Social Sciences Logo">
+            <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
+            <img src="images/anthro.png" alt="Department of Anthropology Logo">
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">About ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="conference.html">Conference</a></li>
+                    <li><a href="committee.html">Organizing Committee</a></li>
+                </ul>
+            </li>
+            <li><a href="themes.html">Themes</a></li>
+            <li><a href="registration.html" style="border: 1px white;">Register</a></li>
+            <li><a href="venue.html">Venue</a></li>
+            <li><a href="callofpaper.html">Call of Paper</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Committee</h1>
+    <footer class="site-footer">
+        <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
+        <p>For any queries, contact us at <a href="mailto:seminar.anthro@uoh.ac.in">seminar.anthro@uoh.ac.in</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            const navLinksArray = document.querySelectorAll('.nav-links a');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+
+                navLinksArray.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        const parent = link.parentElement;
+
+                        // If this is a dropdown parent, don't close menu
+                        if (parent.classList.contains("dropdown")) {
+                            e.preventDefault(); // stop navigation
+                            parent.classList.toggle("open"); // toggle submenu
+                        } else {
+                            navLinks.classList.remove('active'); // close menu on normal link
+                        }
+                    });
+                });
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    // Prevent default link behavior
+                    e.preventDefault();
+
+                    // Toggle "open" class on parent <li>
+                    const parent = this.parentElement;
+                    parent.classList.toggle("open");
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

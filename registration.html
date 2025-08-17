@@ -5,251 +5,18 @@
     <title>University Seminar Program</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo1.png" type="image/png">
-    
-    <style>
-        /* Base styles for all devices */
-        html {
-            scroll-behavior: smooth; /* Enables smooth scrolling for nav links */
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-            line-height: 1.6;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        main {
-            flex: 1; /* Ensures the main content pushes the footer down */
-        }
-
-        /* --- Navigation Bar Styles --- */
-        nav {
-            background-color: #002a52;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 60px;
-        }
-
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 15px;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 20px 15px;
-            display: block;
-            transition: background-color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            background-color: #0055a5;
-        }
-
-        .hamburger-menu {
-            display: none;
-            cursor: pointer;
-            padding: 15px;
-        }
-
-        .hamburger-menu span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px 0;
-            background-color: #fff;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .banner {
-            background: linear-gradient(90deg, #003366 60%, #0055a5 100%);
-            color: #fff;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 20px;
-        }
-
-        .logos img {
-            max-height: 70px; 
-            background: #fff;
-            border-radius: 8px;
-            padding: 5px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            width: auto;
-        }
-        
-        .banner h1 {
-            font-size: 2.2rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin: 15px 0 5px 0;
-        }
-
-        .banner h2 {
-            font-size: 1.3rem;
-            margin-top: 5px;
-            color: #e0e0e0;
-            font-weight: normal;
-        }
-        
-        .banner h3 {
-            font-size: 1.1rem;
-            margin-top: 5px;
-            color: #d0d0d0;
-            font-weight: normal;
-        }
-
-        .content {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-        }
-
-        .content h2 {
-            font-size: 1.8rem;
-            color: #003366;
-            border-bottom: 2px solid #0055a5;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        .content h3 {
-            font-size: 1.3rem;
-            color: #003366;
-            margin-top: 20px;
-        }
-        .content ul {
-            list-style-position: inside;
-            padding-left: 0;
-        }
-        .content li {
-            margin-bottom: 10px;
-        }
-
-        /* --- STYLES FOR NEW SECTIONS --- */
-        .button {
-            display: inline-block;
-            background-color: #0055a5;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #003366;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .highlight {
-            color: red;
-            font-weight: bold;
-        }
-
-        /* --- Footer Styles --- */
-        .site-footer {
-            background-color: #333;
-            color: #ccc;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: auto;
-        }
-
-        .site-footer p {
-            margin: 5px 0;
-            font-size: 0.9rem;
-        }
-        
-        .site-footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .site-footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Tablet styles */
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .logos img { max-height: 60px; }
-            .banner h1 { font-size: 2rem; }
-            .banner h2 { font-size: 1.2rem; }
-        }
-
-        /* Mobile styles */
-        @media (max-width: 767px) {
-            /* Changed nav to space-between for better alignment */
-            nav {
-                justify-content: space-between;
-                padding: 0 15px;
-            }
-            .nav-links {
-                flex-direction: column; 
-                position: absolute; 
-                top: 60px; 
-                left: 0;
-                width: 100%; 
-                background-color: #002a52; 
-                transform: translateX(-100%);
-                transition: transform 0.3s ease-in-out; 
-                padding: 0; 
-                gap: 0;
-            }
-            .nav-links.active { transform: translateX(0); }
-            .nav-links li { text-align: center; border-bottom: 1px solid #003366; }
-            .nav-links a { padding: 15px; }
-            .hamburger-menu { display: block; }
-            .logos { flex-direction: column; gap: 15px; }
-            .logos img { max-height: 50px; }
-            .banner h1 { font-size: 1.5rem; }
-            .banner h2 { font-size: 1rem; }
-            .banner h3 { font-size: 0.9rem; }
-            .content { margin: 20px 15px; padding: 20px; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/index-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
     <nav>
+        <div class="logos">
+            <img src="images/ss.png" alt="School of Social Sciences Logo">
+            <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
+            <img src="images/anthro.png" alt="Department of Anthropology Logo">
+        </div>
         <div class="hamburger-menu">
             <span></span>
             <span></span>
@@ -257,28 +24,24 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">About ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="conference.html">Conference</a></li>
+                    <li><a href="committee.html">Organizing Committee</a></li>
+                </ul>
+            </li>
             <li><a href="themes.html">Themes</a></li>
-            <li><a href="registration.html">Registration</a></li>
+            <li><a href="registration.html" style="border: 1px white;">Register</a></li>
             <li><a href="venue.html">Venue</a></li>
-            <li><a href="submission.html">Submission</a></li>
+            <li><a href="callofpaper.html">Call of Paper</a></li>
         </ul>
     </nav>
 
-    <header class="banner" id="home">
-        <div class="logos">
-            <img src="images/ss.png" alt="School of Social Sciences Logo">
-            <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
-            <img src="images/anthro.png" alt="Department of Anthropology Logo">
-        </div>
-        <h2>University of Hyderabad</h2>
-        <h3>School of Social Sciences</h3>
-        <h3>Department of Anthropology</h3>
-        <h1>Anthropology in Contemporary Practice: Pathways for a Sustainable Future (September 26-27, 2025)</h1>
-    </header>
-
     <main>
-        <section id="registration" class="content">
+
+    </main>
+    <section id="registration" class="content">
             <h2>Registration</h2>
             <h3>Registration Fees</h3>
             <table>
@@ -293,7 +56,10 @@
             </table>
             <p><strong>Inclusions:</strong> Conference materials, tea/coffee, lunch, and a participation certificate.</p>
             <p><strong>Note:</strong> Registration is mandatory for all participants. Spot registration is available on the day of the seminar.</p>
-            <p><strong>Accommodation</strong> details can will be informed soon...!</p>
+            <p><strong>Accommodation: </strong></p>
+            <p>Accommodation will be provided on a first-come, first-served basis at University Guest houses, i.e. Lake View, International Guest House, South Campus guest house, etc. </p>
+            <p><strong>Transportation: </strong></p>
+            <p>Provided 3rd AC fair/chair </p>
             <h3>Payment Details & Registration Form</h3>
             <p>Please complete your payment using the details below and then fill out the registration form.</p>
             <details>
@@ -311,7 +77,6 @@
             </details>
             <a href="https://forms.gle/LKAnkZwxeKrkWEkE7" class="button" target="_blank">Participant Registration</a> <a href="https://forms.gle/jcuipqYhSxqr6oyw6" class="button" target="_blank">Presenter Registration(Paper / Poster)</a>
         </section>
-    </main>
 
     <footer class="site-footer">
         <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
@@ -319,20 +84,47 @@
     </footer>
 
     <script>
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navLinks = document.querySelector('.nav-links');
-        const navLinksArray = document.querySelectorAll('.nav-links a'); // Select all nav links
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            const navLinksArray = document.querySelectorAll('.nav-links a');
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+
+                navLinksArray.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        const parent = link.parentElement;
+
+                        // If this is a dropdown parent, don't close menu
+                        if (parent.classList.contains("dropdown")) {
+                            e.preventDefault(); // stop navigation
+                            parent.classList.toggle("open"); // toggle submenu
+                        } else {
+                            navLinks.classList.remove('active'); // close menu on normal link
+                        }
+                    });
+                });
+            }
         });
 
-        // Add a click listener to each navigation link to close the menu on click
-        navLinksArray.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    // Prevent default link behavior
+                    e.preventDefault();
+
+                    // Toggle "open" class on parent <li>
+                    const parent = this.parentElement;
+                    parent.classList.toggle("open");
+                });
             });
         });
     </script>
+
 </body>
 </html>

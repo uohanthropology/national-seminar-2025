@@ -27,20 +27,20 @@
             <li class="dropdown">
                 <a href="#">About ▼</a>
                 <ul class="dropdown-menu">
-                    <li><a href="about.html">Conference</a></li>
+                    <li><a href="conference.html">Conference</a></li>
                     <li><a href="committee.html">Organizing Committee</a></li>
                 </ul>
             </li>
             <li><a href="themes.html">Themes</a></li>
-            <li><a href="registration.html">Registration</a></li>
+            <li><a href="registration.html" style="border: 1px white;">Register</a></li>
             <li><a href="venue.html">Venue</a></li>
-            <li><a href="submission.html">Submission</a></li>
+            <li><a href="callofpaper.html">Call of Paper</a></li>
         </ul>
     </nav>
 
     <header class="banner" id="home">
         <h1>Anthropology in Contemporary Practice: Pathways for a Sustainable Future (September 26-27, 2025)</h1>
-        <h3>School of Social Science, University of Hyderabad, Hyderabad</h3>
+        <h3>University of Hyderabad, Hyderabad</h3>
         <a href="registration.html">Register Now</a>
     </header>
 
@@ -51,26 +51,28 @@
 
         <section id="conference" class="conference-section">
             <div class="conference-header">
-                <h2>National Conference</h2>
+                <h2>International Conference</h2>
                 <p class="intro-paragraph">
-                    Department of Anthropology, University of Hyderabad cordially invite researchers, academicians, 
-                    practitioners, students, policymakers, and community representatives to participate in this significant 
-                    academic event that explores the evolving role of anthropology in addressing contemporary global challenges.
+                    Department of Anthropology, University of Hyderabad cordially invite researchers, 
+                    academicians, practitioners, students, policymakers, and community representatives to 
+                    participate in this significant academic event that explores the evolving role of 
+                    anthropology in addressing contemporary global challenges.
                 </p>
             </div>
-        </section>
 
+            <div class="conference-details">
+                <div class="detail-box">
+                    <div class="icon">📍</div>
+                    <h3>Where</h3>
+                    <p>School of Social Sciences, University of Hyderabad,<br> Hyderabad</p>
+                </div>
 
-        <section id="dates" class="content">
-            <h2>Conference Dates (2025)</h2>
-            <table>
-                <thead>
-                    <tr><th>Event</th><th>Date</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Conference Dates</td><td><strong>26–27 September</strong></td></tr>
-                </tbody>
-            </table>
+                <div class="detail-box">
+                    <div class="icon">📅</div>
+                    <h3>When</h3>
+                    <p>26-27 September 2025</p>
+                </div>
+            </div>
         </section>
 
         
@@ -95,18 +97,16 @@
         <section id="venue-info" class="content">
               <h2>Venue</h2>
               <p>The seminar will be held at the main Seminar Hall at the University of Hyderabad.</p>
-              <p><strong>September 26-27, 2025 at School of Social Science, University of Hyderabad, Hyderabad</strong></p>
+              <p><strong>September 26-27, 2025 at School of Social Sciences, University of Hyderabad</strong></p>
               <a href="venue.html" class="button">Venue</a>
         </section>
 
         <section id="outcomes" class="content">
             <h2>Contact</h2>
             <p>For any queries, please contact: seminar.anthro@uoh.ac.in</p>
-            <h2><strong>Convener</strong></h2>
-            <h2>Dr. Srinivasu Nookarapu</h2>
-            <h2>Assistant Professor</h2>
-            <h2>Department of Anthropology, University of Hyderabad</h2>
-            <h2>Mail - srinivasu.nookarapu@uohyd.ac.in</h2>
+            <h2>Convener</h2>
+            <p>Dr. Srinivasu Nookarapu, Assistant Professor, Department of Anthropology, University of Hyderabad</p>
+            <p>Email - srinivasu.nookarapu@uohyd.ac.in</p>
         </section>
     </main>
 
@@ -127,19 +127,36 @@
                 });
 
                 navLinksArray.forEach(link => {
-                    link.addEventListener('click', () => {
-                        navLinks.classList.remove('active');
+                    link.addEventListener('click', (e) => {
+                        const parent = link.parentElement;
+
+                        // If this is a dropdown parent, don't close menu
+                        if (parent.classList.contains("dropdown")) {
+                            e.preventDefault(); // stop navigation
+                            parent.classList.toggle("open"); // toggle submenu
+                        } else {
+                            navLinks.classList.remove('active'); // close menu on normal link
+                        }
                     });
                 });
             }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    // Prevent default link behavior
+                    e.preventDefault();
+
+                    // Toggle "open" class on parent <li>
+                    const parent = this.parentElement;
+                    parent.classList.toggle("open");
+                });
+            });
         });
     </script>
 
 </body>
 </html>
-
-
-
-
-
-

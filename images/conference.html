@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Seminar Program</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo1.png" type="image/png">
+    <link rel="stylesheet" href="css/index-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logos">
+            <img src="images/ss.png" alt="School of Social Sciences Logo">
+            <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
+            <img src="images/anthro.png" alt="Department of Anthropology Logo">
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">About ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="conference.html">Conference</a></li>
+                    <li><a href="committee.html">Organizing Committee</a></li>
+                </ul>
+            </li>
+            <li><a href="themes.html">Themes</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="venue.html">Venue</a></li>
+            <li><a href="submission.html">Submission</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="main-image" class="content">
+            <h2>Background</h2>
+            <p>Anthropology today engages directly with health inequities, educational transformation, 
+                environmental risk, digital life, urban change, and heritage futures. 
+                Bringing scholars, practitioners, policymakers, and communities into one 
+                forum enables problem-focused, context-sensitive knowledge that can inform 
+                policy and practice while strengthening university–society linkages. 
+                This concept note is derived from the final public note issued by the organising team. 
+            </p>
+        </section>
+
+
+
+        <section id="Objectives" class="content">
+            <h2>Objectives</h2>
+            <ul>
+                <li>Convene diverse stakeholders to examine how anthropological perspectives and methods 
+                    address contemporary societal challenges across education, health, environment, technology, 
+                    and urban development.
+                </li>
+                <li>Surface actionable insights, methods, and collaborations for field programmes, teaching, and 
+                    policy engagement.
+                </li>
+                <li>Create avenues for student learning, practitioner exchange, and community voice.</li>
+            </ul>
+        </section>
+
+        
+        <section id="audience" class="content">
+            <h2>Target Audience</h2>
+            <ul>
+                <li><strong>Researchers</strong> in anthropology and other social sciences</li>
+                <li><strong>Graduate and Undergraduate Students</strong> pursuing anthropological studies</li>
+                <li><strong>Practitioners</strong> in applied anthropology, development work, and social services</li>
+                <li><strong>Policymakers</strong> in education, health, urban planning, and environmental sectors</li>
+                <li><strong>Community Leaders</strong>, practitioners and Students.</li>
+                <li><strong>NGO Representatives</strong> and social activists</li>
+                <li><strong>Corporate Professionals </strong>in organisational development and market research</li>
+                <li><strong>Digital Technology Specialists</strong> interested in cultural aspects of technology</li>
+            </ul>
+        </section>
+
+        <section id="venue-info" class="content">
+              <h2>Venue</h2>
+              <p>The seminar will be held at the main Seminar Hall at the University of Hyderabad.</p>
+              <p><strong>September 26-27, 2025 at Zakir Hussan Hall, University of Hyderabad</strong></p>
+              <a href="venue.html" class="button">Venue</a>
+        </section>
+
+        <section id="outcomes" class="content">
+            <h2>Contact</h2>
+            <p>For any queries, please contact: seminar.anthro@uoh.ac.in</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
+        <p>For any queries, contact us at <a href="mailto:seminar.anthro@uoh.ac.in">seminar.anthro@uoh.ac.in</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            const navLinksArray = document.querySelectorAll('.nav-links a');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+
+                navLinksArray.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        const parent = link.parentElement;
+
+                        // If this is a dropdown parent, don't close menu
+                        if (parent.classList.contains("dropdown")) {
+                            e.preventDefault(); // stop navigation
+                            parent.classList.toggle("open"); // toggle submenu
+                        } else {
+                            navLinks.classList.remove('active'); // close menu on normal link
+                        }
+                    });
+                });
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    // Prevent default link behavior
+                    e.preventDefault();
+
+                    // Toggle "open" class on parent <li>
+                    const parent = this.parentElement;
+                    parent.classList.toggle("open");
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

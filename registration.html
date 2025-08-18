@@ -5,22 +5,33 @@
     <title>University Seminar Program</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo1.png" type="image/png">
-    <link rel="stylesheet" href="css/index-page.css">
+    <link rel="stylesheet" href="css/register.css">
     <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logos">
-            <img src="images/ss.png" alt="School of Social Sciences Logo">
-            <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
-            <img src="images/anthro.png" alt="Department of Anthropology Logo">
+    <nav class="navbar">
+        <div class="nav-left">
+            <!-- Logo -->
+            <img src="images/logo1.png" alt="UoH Logo" class="nav-logo">
+
+            <!-- Text block -->
+            <div class="nav-texts">
+                <div class="uoh-text">
+                    <h1>University of Hyderabad</h1>
+                    <p>Hyderabad</p>
+                </div>
+                <div class="dept-text">
+                    <h2>Dept. of <span>Anthropology</span></h2>
+                    <p>National Conference 2025</p>
+                </div>
+            </div>
         </div>
+
+        <!-- Links -->
         <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -31,19 +42,17 @@
                     <li><a href="committee.html">Organizing Committee</a></li>
                 </ul>
             </li>
-            <li><a href="themes.html">Themes</a></li>
-            <li><a href="registration.html" style="border: 1px white;">Register</a></li>
             <li><a href="venue.html">Venue</a></li>
-            <li><a href="callofpaper.html">Call of Paper</a></li>
+            <li><a href="callofpaper.html">Call for Paper</a></li>
+            <li><a href="registration.html" class="register-btn">Register</a></li>
         </ul>
     </nav>
 
-    <main>
 
-    </main>
-    <section id="registration" class="content">
-            <h2>Registration</h2>
-            <h3>Registration Fees</h3>
+    <main>
+        <section id="registration" class="content">
+            <h1><strong>Registration</strong></h1>
+            <h2><strong>Registration Fees</strong></h2>
             <table>
                 <thead>
                     <tr><th>Category</th><th>Fee (₹)</th><th>Spot Registration Fee (₹)</th></tr>
@@ -56,11 +65,14 @@
             </table>
             <p><strong>Inclusions:</strong> Conference materials, tea/coffee, lunch, and a participation certificate.</p>
             <p><strong>Note:</strong> Registration is mandatory for all participants. Spot registration is available on the day of the seminar.</p>
-            <p><strong>Accommodation: </strong></p>
-            <p>Accommodation will be provided on a first-come, first-served basis at University Guest houses, i.e. Lake View, International Guest House, South Campus guest house, etc. </p>
-            <p><strong>Transportation: </strong></p>
+            <p><strong>Accommodation, Food and Transportation: </strong></p>
+            <p>For selected research papers, accommodation will be provided on a shared basis (two authors per room) 
+                at the University Guest House from the evening of 25th September to the morning of 28th September 2025. 
+                Modest boarding facilities will be arranged, and food will be provided during the seminar dates.
+            </p>
+            <p><strong>Transportation: Provided 3rd AC fair/Airfare (Invited) </strong></p>
             <p>Provided 3rd AC fair/chair </p>
-            <h3>Payment Details & Registration Form</h3>
+            <p>Payment Details & Registration Form</p>
             <p>Please complete your payment using the details below and then fill out the registration form.</p>
             <details>
                 <summary><strong>Click here for Bank Account & UPI Details</strong></summary>
@@ -77,10 +89,11 @@
             </details>
             <a href="https://forms.gle/LKAnkZwxeKrkWEkE7" class="button" target="_blank">Participant Registration</a> <a href="https://forms.gle/jcuipqYhSxqr6oyw6" class="button" target="_blank">Presenter Registration(Paper / Poster)</a>
         </section>
+    </main>
 
     <footer class="site-footer">
         <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
-        <p>For any queries, contact us at <a href="mailto:seminar.anthro@uoh.ac.in">seminar.anthro@uoh.ac.in</a></p>
+        <p>For any queries, contact us at <a href="mailto:anthropology.aicp2025@uohyd.ac.in">seminar.anthro@uoh.ac.in</a></p>
     </footer>
 
     <script>

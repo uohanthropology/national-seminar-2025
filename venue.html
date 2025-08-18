@@ -5,22 +5,33 @@
     <title>University Seminar Program</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo1.png" type="image/png">
-    <link rel="stylesheet" href="css/index-page.css">
+    <link rel="stylesheet" href="css/venue-page.css">
     <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logos">
-            <img src="images/ss.png" alt="School of Social Sciences Logo">
-            <img src="images/uoh-logo.png" alt="University of Hyderabad Logo">
-            <img src="images/anthro.png" alt="Department of Anthropology Logo">
+    <nav class="navbar">
+        <div class="nav-left">
+            <!-- Logo -->
+            <img src="images/logo1.png" alt="UoH Logo" class="nav-logo">
+
+            <!-- Text block -->
+            <div class="nav-texts">
+                <div class="uoh-text">
+                    <h1>University of Hyderabad</h1>
+                    <p>Hyderabad</p>
+                </div>
+                <div class="dept-text">
+                    <h2>Dept. of <span>Anthropology</span></h2>
+                    <p>National Conference 2025</p>
+                </div>
+            </div>
         </div>
+
+        <!-- Links -->
         <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -31,47 +42,98 @@
                     <li><a href="committee.html">Organizing Committee</a></li>
                 </ul>
             </li>
-            <li><a href="themes.html">Themes</a></li>
-            <li><a href="registration.html" style="border: 1px white;">Register</a></li>
             <li><a href="venue.html">Venue</a></li>
-            <li><a href="callofpaper.html">Call of Paper</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="callofpaper.html">Call for Paper</a></li>
+            <li><a href="registration.html" class="register-btn">Register</a></li>
         </ul>
     </nav>
 
     <main>
-        <section id="conference" class="conference-section">
-            <div class="conference-header">
-                <img src="images/india.jpg" alt="india">
-                <div class="icon"></div>
-                <h3>India</h3>
-                <p class="intro-paragraph">
-                    India, a land of diverse cultures and heritage, is known for its academic institutions,
-                    innovation, and global research contributions.
+        <section id="about-hyderabad" class="split-section">
+            <div class="split-text">
+                <h1>Hyderabad</h1>
+                <p>
+                    Hyderabad, known as the “City of Pearls,” is a vibrant blend of heritage and modernity. 
+                    Founded in 1591 by Muhammad Quli Qutb Shah, the city is famed for its iconic Charminar, 
+                    Golconda Fort, and the magnificent Qutb Shahi Tombs. A historical hub of culture, art, and 
+                    architecture, Hyderabad has long been a meeting point of North and South India.
+                </p>
+                <p>
+                    Hyderabad is a global hub for information technology and pharmaceuticals, known as "Cyberabad". 
+                    The city blends tradition, with its bustling bazaars, and innovation, with its cutting-edge tech parks. 
+                    It is also a paradise for food lovers, famous for its Hyderabadi Biryani and Irani Chai.
+                </p>
+                <p>
+                    As a venue for the <strong>National Seminar 2025</strong>, Hyderabad offers delegates not only 
+                    an engaging academic atmosphere but also an immersive cultural experience, where centuries of 
+                    history and contemporary dynamism converge.
                 </p>
             </div>
-
-            <div class="conference-details">
-                <div class="detail-box">
-                    <div class="icon"><img src="images/charminar-hyderabad-2-attr-hero.jpeg" alt="Hyderabad"></div>
-                    <h3>Hyderabad</h3>
-                    <p>Hyderabad, known as the “City of Pearls”, blends tradition and technology. 
-        It is home to historic landmarks such as the Charminar and modern IT hubs.
-                    </p>
-                </div>
-
-                <div class="detail-box">
-                    <div class="icon"><img src="images/Main-Gate_Cover-1080x640.jpeg" alt="uoh"></div>
-                    <h3>University of Hyderabad</h3>
-                    <p>The University of Hyderabad is a premier institution for postgraduate education and research,
-        known for its sprawling green campus and academic excellence.</p>
-                </div>
+            <div class="split-image">
+                <img src="images/charminar-hyderabad-2-attr-hero.jpeg" alt="Charminar Hyderabad" />
             </div>
         </section>
+
+        <section id="about-uoh" class="split-section">
+            <div class="split-image">
+                <img src="images/Main-Gate_Cover-1080x640.jpeg" alt="University of Hyderabad Campus" />
+            </div>
+            <div class="split-text">
+                <h1>University of Hyderabad</h1>
+                <p>
+                    The <strong>University of Hyderabad(UoH)</strong> is a premier central university established in 1974. 
+                    Recognized for its academic excellence and research, the university is located on a lush 
+                    2,300-acre campus that provides a serene environment for intellectual pursuits and is surrounded 
+                    by rich biodiversity.
+                </p>
+                <p>
+                    UoH is consistently ranked among India's top universities and has been designated an <strong>Institute of Eminence</strong> 
+                    by the government. The university is known for its strong interdisciplinary programs, cutting-edge research 
+                    across science, technology, social sciences, humanities, and arts, and its emphasis on critical thinking and innovation.
+                </p>
+                <p>
+                    With its world-class faculty, advanced research facilities, and diverse student body, 
+                    UoH remains a hub for creating and sharing knowledge. The university's decision to host the 
+                    <strong>National Seminar 2025</strong> demonstrates its commitment to promoting academic discussion and contributing 
+                    to policy and societal change.
+                </p>
+            </div>
+        </section>
+
+        <section id="about-anthropology" class="split-section">
+            <div class="split-text">
+                <h1>Department of Anthropology</h1>
+                <p>
+                    Established in <strong>1979</strong>, the Department of Anthropology at the 
+                    <strong>University of Hyderabad</strong> is a leading centre for teaching and 
+                    research in both <strong>Biological</strong> and <strong>Social-Cultural 
+                    Anthropology</strong>. 
+                </p>
+                <p>
+                    The department is known for its work in <em>tribal and rural studies, medical 
+                    anthropology, gender, environment, urban dynamics, forensic science,</em> 
+                    and <em>human genetics</em>. Its programs — from <strong>M.A. and M.Sc. to Ph.D.</strong> 
+                    — blend classroom learning with field-based research. 
+                </p>
+                <p>
+                    Alumni of the department contribute significantly in academia, policy, and 
+                    applied research. Hosting the <strong>National Seminar 2025</strong> reflects 
+                    its commitment to engaging with contemporary challenges and fostering dialogue 
+                    for a sustainable future.
+                </p>
+            </div>
+            <div class="split-image">
+                <img src="images/anthro1.jpg" alt="Department of Anthropology" />
+            </div>
+        </section>
+
+        
     </main>
 
     <footer class="site-footer">
         <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
-        <p>For any queries, contact us at <a href="mailto:seminar.anthro@uoh.ac.in">seminar.anthro@uoh.ac.in</a></p>
+        <p>For any queries, contact us at <a href="mailto:anthropology.aicp2025@uohyd.ac.in">seminar.anthro@uoh.ac.in</a></p>
     </footer>
 
     <script>
@@ -119,4 +181,3 @@
 
 </body>
 </html>
-

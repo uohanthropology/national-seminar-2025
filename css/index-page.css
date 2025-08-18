@@ -245,7 +245,7 @@ main { flex: 1; }
         text-align: center;
     }
     .nav-links.active { display: flex; }
-    .hamburger-menu { display: flex; }
+    .hamburger-menu { display: flex; padding-left: 5px; size: 10px;}
 
     .nav-texts { display: none; } /* hide text block on mobile */
 
@@ -273,4 +273,5 @@ main { flex: 1; }
     }
     .dropdown-menu a { color: #050505; padding: 12px; }
 }
+
 

@@ -1,316 +1,98 @@
-/* Base styles for all devices */
-        html {
-            scroll-behavior: smooth; /* Enables smooth scrolling for nav links */
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-            line-height: 1.6;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+/* Base styles */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* prevent horizontal scrolling */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main { flex: 1; }
 
-        main {
-            flex: 1; /* Ensures the main content pushes the footer down */
-        }
+/* --- Navigation Bar --- */
+.navbar {
+    background: linear-gradient(to right, #989360, #2e4751);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.nav-logo { height: 60px; width: auto; }
 
-        /* --- Navigation Bar Styles --- */
-        nav {
-            background-color: #002a52;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between; /* logos left, nav-links right */
-            align-items: center;
-            padding: 0 10px; /* some breathing room */
-            height: 70px; /* taller nav bar for bigger logos */
-        }
+.nav-texts {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.2;
+    gap: 15px;
+}
+.uoh-text h1 { margin: 0; font-size: 14px; font-weight: bold; }
+.uoh-text p { margin: 0; font-size: 10px; color: #ccc; }
 
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 25px; /* more space between links */
-        }
+.dept-text h2 { margin: 0; font-size: 14px; font-weight: bold; color: #f5c842; }
+.dept-text h2 span { color: #fff; }
+.dept-text p { margin: 0; font-size: 10px; color: #ccc; }
 
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 10px; /* slightly larger font */
-            padding: 10px 15px;
-            display: block;
-            transition: background-color 0.3s ease;
-        }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px 12px;
+    transition: color 0.3s;
+}
+.nav-links a:hover { color: #f5c842; }
 
-        .nav-links a:hover {
-            background-color: #0055a5;
-            border-radius: 5px;
-        }
-
-        .hamburger-menu {
-            display: none;
-            cursor: pointer;
-            padding: 15px;
-        }
-
-        .hamburger-menu span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px 0;
-            background-color: #fff;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .logos {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 0; /* remove extra spacing */
-        }
-
-        .logos img {
-            height: 35px;  /* increase size like in your screenshot */
-            width: auto;
-            background: transparent; /* remove white bg box */
-            padding: 0; /* no extra padding */
-            box-shadow: none; /* remove shadow */
-            object-fit: contain;
-        }
-
-        .banner {
-            /*background-image: url('images/banner.jpg') no-repeat center center/cover; /* full cover background */
-            background-color: #3472ac; /* solid color fallback */
-            height: 200px; /* fixed height for the banner */ 
-            color: #fff;
-            padding: 70px 10px;                     /* more padding for space */
-            text-align: center; /* ensure enough height for content */
-            position: relative; /* for z-index stacking */
-            justify-content: center;
-        }
-
-        .banner a {
-            display: inline-block;
-            background-color: #0055a5;
-            border: 2px solid #fff;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            transition: background-color 0.3s ease;
-        }
-
-        
-        .banner h1 {
-            font-size: 10px;
-            font-family: 'Mozilla Headline', sans-serif; /* Use custom font */
-            font-size: 2rem;
-            line-height: 1.4;
-            padding: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .banner h2 {
-            font-size: 1.3rem;
-            margin-top: 5px;
-            color: #0f0d0d;
-            font-weight: normal;
-        }
-        
-        .banner h3 {
-            font-family: 'Mozilla Headline', sans-serif; /* Use custom font */
-            font-size: 1.1rem;
-            margin-top: 5px;
-            color: #d0d0d0;
-            font-weight: normal;
-        }
-
-        .content {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-        }
-
-        .content h2 {
-            font-size: 1.8rem;
-            color: #003366;
-            border-bottom: 2px solid #0055a5;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font: 18px Poppins, sans-serif;
-        }
-
-        .content p {
-            margin-bottom: 20px;
-            line-height: 1.6;
-            font: 14px Poppins, sans-serif;
-        }
-        .content h3 {
-            font-size: 1.3rem;
-            color: #003366;
-            margin-top: 20px;
-        }
-        .content ul {
-            list-style-position: inside;
-            padding-left: 0;
-        }
-        .content li {
-            margin-bottom: 10px;
-        }
-
-        .content img {
-            width: 25px;
-            height: 70px;/* space around images */
-        }
-
-        /* Flex Container */
-        .conference-section {
-            max-width: 900px;
-            margin: 50px auto;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .conference-header h2 {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #2b2b2b;
-            margin-bottom: 15px;
-        }
-
-        .conference-header p {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-
-        .conference-header img {
-            max-width: 100px;
-            height: 20px;
-        }
-
-        .conference-details {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            flex-wrap: wrap;
-        }
-
-        .detail-box {
-            flex: 1;
-            min-width: 200px;
-            max-width: 250px;
-        }
-
-        .detail-box .icon {
-            font-size: 2.5rem;
-            color: #b8860b; /* golden color */
-            margin-bottom: 10px;
-        }
-
-        .detail-box h3 {
-            font-size: 1.2rem;
-            color: #222;
-            margin-bottom: 5px;
-        }
-
-        .detail-box p {
-            font-size: 1rem;
-            color: #444;
-        }
-
-        /* --- STYLES FOR NEW SECTIONS --- */
-        .button {
-            display: inline-block;
-            background-color: #0055a5;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 15px;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #003366;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .highlight {
-            color: red;
-            font-weight: bold;
-        }
-
-        /* --- Footer Styles --- */
-        .site-footer {
-            background-color: #333;
-            color: #ccc;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: auto;
-        }
-
-        .site-footer p {
-            margin: 5px 0;
-            font-size: 0.9rem;
-        }
-        
-        .site-footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .site-footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Prevent unwanted horizontal scrolling */
-        html, body {
-            overflow-x: hidden;
-        }
-
-        /* Ensure nav doesn’t exceed screen width */
-        nav { overflow: visible; }     /* allow dropdown to show below nav */
-        .nav-links { overflow: visible; }
-
-        /* Ensure images don’t overflow */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Dropdown Menu */
-.dropdown {
-    position: relative;
+.register-btn {
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+.register-btn:hover {
+    background: white;
+    color: #000;
 }
 
-.dropdown a {
+/* Mobile menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
     cursor: pointer;
 }
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
 
+/* Dropdown Menu */
+.dropdown { position: relative; }
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -323,223 +105,233 @@
     z-index: 1000;
     padding: 10px 0;
 }
-
-.dropdown-menu li {
-    list-style: none;
-}
-
+.dropdown-menu li { list-style: none; }
 .dropdown-menu a {
     color: #002a52;
     padding: 10px 20px;
     display: block;
     font-size: 0.95rem;
-    font-weight: normal;
     text-decoration: none;
     transition: background 0.2s ease;
 }
+.dropdown-menu a:hover { background: #f2f2f2; }
+.dropdown:hover .dropdown-menu { display: block; }
 
-.dropdown-menu a:hover {
-    background: #f2f2f2;
-}
-
-/* Show menu on hover (desktop) */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* image text block */
-    .image-text-section {
+/* --- Banner --- */
+.banner {
+    background-color: #fdff8b;
+    min-height: 250px;
+    color: #fff;
     display: flex;
-    align-items: center;   /* vertically center image and text */
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;             /* space between image and text */
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .image-box img {
-    width: 200px;          /* control image size */
-    height: auto;
-    border-radius: 8px;
-    }
-
-    .text-box {
-    flex: 1;               /* text takes remaining space */
-    }
-
-    .text-box h2 {
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+.banner h1 {
+    font-family: 'Mozilla Headline', sans-serif;
+    font-size: 2rem;
+    line-height: 1.4;
+    margin: 0 0 15px;
+    max-width: 900px;
+    color: #000000;
+}
+.banner h2 {
+    font-family: 'Mozilla Headline', sans-serif;
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: normal;
     margin: 0 0 10px;
-    color: #003366;
-    }
+}
+.banner h3 {
+    font-family: 'Mozilla Headline', sans-serif;
+    font-size: 1rem;
+    margin: 0 0 20px;
+    color: #000000;
+}
+.banner a {
+    display: inline-block;
+    background-color: #000000;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+.banner a:hover { background-color: #003366; }
 
-    .text-box p {
+/* --- Content Sections --- */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.content h1 {
+    font-size: 1.8rem;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 10px;
+}
+.content p { margin-bottom: 10px; line-height: 1.6; }
+.content h3 { font-size: 1.3rem; color: #000000; margin: 5px 0 10px; }
+.content ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
+}
+.content li { margin: 5px 0; }
+
+/* --- Conference Section --- */
+.conference-section {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+}
+.conference-header h2 { font-size: 2rem; font-weight: bold; color: #2b2b2b; margin-bottom: 15px; }
+.conference-header p { font-size: 1rem; color: #555; margin-bottom: 40px; }
+.conference-details {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.detail-box { flex: 1; min-width: 200px; max-width: 250px; }
+.detail-box .icon { font-size: 2.5rem; color: #b8860b; margin-bottom: 10px; }
+.detail-box h3 { font-size: 1.2rem; color: #222; margin-bottom: 5px; }
+.detail-box p { font-size: 1rem; color: #444; }
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: auto;
+}
+.site-footer p { margin: 5px 0; font-size: 0.9rem; }
+.site-footer a { color: #fff; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* id  */
+#venue-info a {
+    display: inline-block;
+    background-color: #0055a5;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* --- Split Section (Image + Text) --- */
+.split-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.split-text {
+    flex: 1;
+}
+
+.split-text h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.split-text p {
+    font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 15px;
     color: #444;
+}
+
+.split-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.split-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0d1a1f;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links.active { display: flex; }
+    .hamburger-menu { display: flex; }
+
+    .nav-texts { display: none; } /* hide text block on mobile */
+
+    .banner { padding: 20px 10px; }
+    .banner h1 { font-size: 1.1rem; line-height: 1.5; max-width: 95%; }
+    .banner a { font-size: 0.85rem; padding: 8px 12px; }
+
+    .content { margin: 15px; padding: 15px; }
+    .content {
+    word-wrap: break-word;      /* old support */
+    overflow-wrap: break-word;  /* modern support */
+    word-break: break-word;     /* fallback */
     }
 
-    /* Venue Section */
-.venue-section {
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px; /* spacing between blocks */
+    .content a, 
+    .content p, 
+    .content li {
+    white-space: normal;        /* allows wrapping */
+    overflow-wrap: anywhere;    /* breaks long text anywhere if needed */
+    }
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .dropdown-menu a { color: #050505; padding: 12px; }
+
+    .split-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* Force image on top */
+    .split-image {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .split-text h1 {
+        font-size: 1.5rem;
+    }
+    .split-text p {
+        font-size: 0.95rem;
+    }
 }
-
-.venue-box {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.venue-image img {
-  width: 250px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.venue-text {
-  flex: 1;
-}
-
-.venue-text h2 {
-  margin: 0 0 10px;
-  color: #003366;
-}
-
-.venue-text p {
-  margin: 0;
-  color: #444;
-  line-height: 1.6;
-}
-
-
-        /* Tablet styles */
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .logos img { max-height: 60px; }
-            .banner h1 { font-size: 2rem; }
-            .banner h2 { font-size: 1.2rem; }
-            .dropdown:hover .dropdown-menu {
-                display: block;
-            }
-        }
-
-        /* Mobile styles */
-        @media (max-width: 767px) {
-            nav {
-                justify-content: space-between;
-                padding: 0 10px;
-                height: 60px; /* keep nav compact */
-            }
-
-            /* Show only the main University logo */
-            .logos img:not(:nth-child(3)) {
-                display: none;
-            }
-
-            .logos img {
-                max-height: 35px; /* nice readable size */
-                width: auto;
-            }
-
-            /* Stack menu vertically when opened */
-            .nav-links {
-                display: none;   /* hidden by default */
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background-color: #002a52;
-                padding: 0;
-                gap: 0;
-                z-index: 1001;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                text-align: center;
-                border-bottom: 1px solid #003366;
-            }
-
-            .nav-links a {
-                padding: 15px;
-            }
-
-            .hamburger-menu {
-                display: block;
-            }
-
-            /* Banner text scaling */
-            .banner {
-                height: auto; /* allow height to adjust based on content */
-                padding: 20px 10px; /* more breathing room */
-            }
-
-            .banner h1 {
-                font-size: 1.1rem;   /* smaller text */
-                line-height: 1.5;   /* more space between lines */
-                padding: 10px 5px; /* breathing room */
-                max-width: 95%;     /* prevent edge-to-edge stretching */
-            }
-
-            .banner h3 {
-                font-size: 1rem;
-            }
-
-            .banner a {
-                font-size: 0.85rem;
-                padding: 8px 12px;
-            }
-
-            /* Content spacing */
-            .content {
-                margin: 15px;
-                padding: 15px;
-                border-radius: 8px;
-            }
-
-            .dropdown-menu {
-                position: static;
-                box-shadow: none;
-                background: #ffffff;
-                border-radius: 0;
-            }
-            .dropdown-menu a {
-                color: #050505;
-                padding: 12px;
-            }
-            .dropdown-menu a:hover {
-                background: #f8f9f9;
-            }
-
-            .dropdown:hover .dropdown-menu {
-                display: block;
-            }
-
-            .dropdown.open .dropdown-menu {
-                display: block;
-            }
-
-            .venue-box {
-                flex-direction: column; /* stack image above text */
-                text-align: center;
-            }
-            .venue-image img {
-                width: 200px;
-            }
-        }

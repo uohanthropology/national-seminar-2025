@@ -261,7 +261,7 @@ main { flex: 1; }
     line-height: 1.6;
     margin-bottom: 15px;
     color: #444;
-    text-align: center;
+    justify-content: center;
 }
 
 .split-image {
@@ -339,6 +339,7 @@ main { flex: 1; }
         font-size: 0.95rem;
     }
 }
+
 
 
 

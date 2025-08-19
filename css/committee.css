@@ -283,7 +283,7 @@ main { flex: 1; }
     object-fit: cover;
     margin-bottom: 15px;
 }
-.head-card h3 { margin: 10px 0 5px; font-size: 1.1rem; }
+.head-card h3 { margin: 10px 0 5px; font: 1.1rem, poppins, sans-serif;}
 .head-card p { margin: 0 0 8px; font-size: 0.95rem; color: #666; }
 .head-card .role {
     display: inline-block;
@@ -300,22 +300,23 @@ main { flex: 1; }
     margin-bottom: 30px;
 }
 .committee-block h2 {
-    font-size: 1.5rem;
+    font: 1.5rem poppins, sans-serif;
     color: #222;
     margin-bottom: 15px;
 }
 .committee-block h3 {
-    font-size: 1.2rem;
+    font: 1.2rem poppins, sans-serif;
     margin: 15px 0 8px;
     color: #444;
 }
 .committee-block ul {
     padding-left: 20px;
+    
 }
 .committee-block li {
     margin: 6px 0;
-    font-size: 0.95rem;
     line-height: 1.5;
+    font: 18px poppins, sans-serif; color: #333; margin: 0 0 16px
 }
 
 /* --- Responsive --- */
@@ -412,6 +413,7 @@ main { flex: 1; }
         line-height: 1.4;
     }
 }
+
 
 
 

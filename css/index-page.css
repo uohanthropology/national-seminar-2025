@@ -192,7 +192,7 @@ main { flex: 1; }
     padding: 0;
     margin: 0;
 }
-.content li { margin: 5px 0; font: 16px poppins, sans-serif; color: #333; }
+.content li { margin: 5px 0; font: 18px poppins, sans-serif; color: #333; margin: 0 0 16px}
 
 /* --- Conference Section --- */
 .conference-section {
@@ -434,6 +434,7 @@ main { flex: 1; }
         margin: 20px auto;
     }
 }
+
 
 
 

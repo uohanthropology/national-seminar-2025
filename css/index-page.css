@@ -139,7 +139,7 @@ main { flex: 1; }
     color: #2e4751;
 }
 .banner h2 {
-    font: 24px poppins, sans-serif;
+    font: 38px poppins, sans-serif;
     color: #000000;
     font-weight: normal;
     margin: 0 0 10px;
@@ -151,7 +151,7 @@ main { flex: 1; }
     color: #000000;
 }
 .banner p {
-    font: 20px poppins, sans-serif;
+    font: 32px poppins, sans-serif;
     color: #000000;
     margin: 0 0 20px;
 }
@@ -433,4 +433,5 @@ main { flex: 1; }
         margin: 20px auto;
     }
 }
+
 

@@ -264,30 +264,22 @@ main { flex: 1; }
 /* --- Responsive CSS for Call for Papers Page --- */
 @media (max-width: 768px) {
     /* Navbar adjustments */
-    .navbar {
-        height: 60px;
-        padding: 0 15px;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0d1a1f;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        text-align: center;
     }
     .nav-logo { height: 40px; }
     .nav-texts h1 { font-size: 12px; }
     .nav-texts p { font-size: 9px; }
     .dept-text h2 { font-size: 12px; }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #2e4751;
-        z-index: 1000;
-    }
+
     .nav-links.active { display: flex; }
-    .nav-links a {
-        padding: 12px;
-        font-size: 0.9rem;
-        text-align: center;
-    }
     .hamburger-menu { display: flex; }
 
     /* Content adjustments */
@@ -353,5 +345,6 @@ main { flex: 1; }
         text-align: center;
     }
 }
+
 
 

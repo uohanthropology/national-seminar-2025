@@ -187,28 +187,23 @@ main { flex: 1; }
 
 /* Mobile */
 @media (max-width: 767px) {
-    nav {
-        justify-content: space-between;
-        padding: 0 10px;
-        height: 60px;
-    }
     .nav-links {
         display: none;
         flex-direction: column;
+        background: #0d1a1f;
         position: absolute;
-        top: 60px;
-        left: 0;
+        top: 80px;
+        right: 0;
         width: 100%;
-        background-color: #002a52;
-        z-index: 1001;
-    }
-    .nav-links.active { display: flex; }
-    .nav-links li {
         text-align: center;
-        border-bottom: 1px solid #003366;
     }
-    .nav-links a { padding: 15px; }
-    .hamburger-menu { display: block; }
+    .nav-logo { height: 40px; }
+    .nav-texts h1 { font-size: 12px; }
+    .nav-texts p { font-size: 9px; }
+    .dept-text h2 { font-size: 12px; }
+
+    .nav-links.active { display: flex; }
+    .hamburger-menu { display: flex; }
 
     /* Key focus areas single column */
     #key-focus-areas { padding: 25px 15px; }
@@ -236,4 +231,5 @@ main { flex: 1; }
 html, body { overflow-x: hidden; }
 nav { overflow: visible; }
 img { max-width: 100%; height: auto; display: block; }
+
 

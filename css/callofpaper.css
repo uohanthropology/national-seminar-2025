@@ -120,7 +120,7 @@ main { flex: 1; }
 /* --- Banner --- */
 .banner {
     background-color: #fdff8b;
-    min-height: 250px;
+    min-height: 190px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -353,4 +353,5 @@ main { flex: 1; }
         text-align: center;
     }
 }
+
 

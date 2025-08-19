@@ -244,7 +244,7 @@ main { flex: 1; }
 
 /* Sponsor logo styling */
 .sponsor-logo {
-  max-width: 150px;
+  max-width: 200px;
   height: auto;
   margin-bottom: 10px;
   border-radius: 8px;
@@ -434,6 +434,7 @@ main { flex: 1; }
         margin: 20px auto;
     }
 }
+
 
 
 

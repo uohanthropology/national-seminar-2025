@@ -1,6 +1,6 @@
 /* Styling for the new 'Structure of the Conference' section */
 .conference-structure-section {
-    max-width: 900px;
+    max-width: 700px;
     margin: 50px auto;
     text-align: center;
     padding: 20px;
@@ -36,7 +36,7 @@
 
 .structure-card h3 {
     font-size: 1.25rem;
-    color: #333;
+    color: #989360;
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -64,7 +64,7 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 25px;
-    color: #fff;
+    color: #989360;
 }
 
 #key-focus-areas .focus-list {
@@ -106,6 +106,7 @@
     #key-focus-areas h1 {
         font-size: 1.5rem;
         margin-bottom: 20px;
+        color: #989360;
     }
 
     #key-focus-areas .focus-list {
@@ -116,3 +117,4 @@
         font-size: 0.95rem;
     }
 }
+

@@ -136,11 +136,12 @@ main { flex: 1; }
     line-height: 1.4;
     margin: 0 0 15px;
     max-width: 900px;
-    color: #fe7f10;
+    color: #2e4751;
+;
 }
 .banner h2 {
-    font: 36px poppins, sans-serif;
-    color: #2e4751;
+    font: 40px poppins, sans-serif;
+    color: #fe7f10;
     font-weight: normal;
     margin: 0 0 10px;
 }
@@ -151,7 +152,7 @@ main { flex: 1; }
     color: #2e4751;
 }
 .banner p {
-    font: 20px poppins, sans-serif;
+    font: 25px poppins, sans-serif;
     color: #000000;
     margin: 0 0 20px;
 }
@@ -433,6 +434,7 @@ main { flex: 1; }
         margin: 20px auto;
     }
 }
+
 
 
 

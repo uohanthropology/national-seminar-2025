@@ -119,8 +119,8 @@ main { flex: 1; }
 
 /* --- Banner --- */
 .banner {
-    background-color: #fdff8b;
-    min-height: 190px;
+    background-color: #9e996c;
+    min-height: 160px;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -345,6 +345,7 @@ main { flex: 1; }
         text-align: center;
     }
 }
+
 
 
 

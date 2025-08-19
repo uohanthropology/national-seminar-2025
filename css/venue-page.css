@@ -288,10 +288,13 @@ main { flex: 1; }
         width: 100%;
         text-align: center;
     }
+    .nav-logo { height: 40px; }
+    .nav-texts h1 { font-size: 12px; }
+    .nav-texts p { font-size: 9px; }
+    .dept-text h2 { font-size: 12px; }
+
     .nav-links.active { display: flex; }
     .hamburger-menu { display: flex; }
-
-    .nav-texts { display: none; } /* hide text block on mobile */
 
     .banner { padding: 20px 10px; }
     .banner h1 { font-size: 1.1rem; line-height: 1.5; max-width: 95%; }
@@ -335,4 +338,5 @@ main { flex: 1; }
         font-size: 0.95rem;
     }
 }
+
 

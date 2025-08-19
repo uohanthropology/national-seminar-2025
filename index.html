@@ -51,9 +51,9 @@
 
 
     <header class="banner" id="home">
-        <h1>National Seminar<br>on<br>Anthropology in Contemporary Practice: Pathways for a Sustainable Future<br> 26-27 September 2025<br></h1>
-        <h2>In honour of Prof B.V. Sharma upon his Superannuation</h2>
-        <h3>University of Hyderabad, Hyderabad</h3>
+        <h1>National Seminar<br>on<br>Anthropology in Contemporary Practice: Pathways for a Sustainable Future</h1>
+        <p><i>In honour of Prof B.V. Sharma on his Superannuation</i></p>
+        <p>26-27 September 2025</p>
         <a href="registration.html">Register Now</a>
     </header>
 
@@ -64,7 +64,7 @@
 
         <section id="conference" class="conference-section">
             <div class="conference-header">
-                <h1><strong>National Conference</strong></h1>
+                <h2><strong>National Conference</strong></h2>
                 <p class="intro-paragraph">
                     Department of Anthropology, University of Hyderabad cordially invite researchers, 
                     academicians, practitioners, students, policymakers, and community representatives to 
@@ -88,7 +88,28 @@
             </div>
         </section>
 
-        
+        <section id="schedule" class="schedule-section">
+            <h2><strong>Conference</strong> Schedule</h2>
+
+            <!-- Tabs -->
+            <div class="schedule-tabs">
+                <button class="tab-btn active" data-day="day1">Day 1<br><span>Sep 26, 2025</span></button>
+                <button class="tab-btn" data-day="day2">Day 2<br><span>Sep 27, 2025</span></button>
+            </div>
+
+            <!-- Content -->
+            <div class="schedule-content">
+                <div class="day-schedule active" id="day1">
+                    <p>Coming Soon..!</p>
+                </div>
+
+                <div class="day-schedule" id="day2">
+                    <p>Coming Soon..!</p>
+                </div>
+            </div>
+        </section>
+
+
         <section id="audience" class="content">
             <h1><strong>Who Should Attend?</strong></h1>
             <ul>
@@ -107,6 +128,19 @@
             </ul>
         </section>
 
+        <section id="sponsers" class="content">
+            <h1><strong>Conference Sponsors</strong></h1>
+            <p>We are grateful to our sponsors for their generous support in making this conference possible.</p>
+            <div class="sponser-1">
+                <img src="images/igrms.jpg" alt="Sponsor Logo" class="sponsor-logo">
+                <p><strong>Indira Gandhi<br>Rashtriya Manav Sangrahalaya<br>(IGRMS)</strong></p>
+            </div>
+            <div class="sponser-2">
+                <img src="images/logo_sthree sakthi v3 bckv6 scaled.png" alt="Sponsor Logo" class="sponsor-logo">
+                <p><strong>Sthree Sakthi</strong></p>   
+            </div>
+        </section>
+
         <section id="venue-info" class="content">
             <h1><strong>Venue</strong></h1>
             <h3><strong>Conference Venue:</strong></h3> 
@@ -121,28 +155,23 @@
 
         <section id="outcomes" class="content">
             <h1><strong>Contact Us</strong></h1>
-            <h3><strong>General Enquiries:</strong></h3>
             <ul>
-                <li><strong>Email: </strong>anthropology.aicp2025@uohyd.ac.in</li>
-                <li><strong>Phone: </strong>Two Students Convener</li>
+                <li>anthropology.aicp2025@uohyd.ac.in</li>
+                <li>srinivasu.nookarapu@uohyd.ac.in</li>
                 <li><strong>Website: </strong>https://uohanthropology.github.io/national-seminar-2025/index.html</li>
-            </ul>
-            <h3><strong>Submission Queries:</strong></h3>
+            </ul><br>
             <ul>
-                <li><strong>Email: </strong>anthropology.aicp2025@uohyd.ac.in</li>
-                <li><strong>Technical Support: </strong>Two student convenors </li>
-            </ul>
-            <h3><strong>Registration:</strong></h3>
-            <ul>
-                <li><strong>Email: </strong>anthropology.aicp2025@uohyd.ac.in</li>
-                <li><strong>Phone: </strong>Two student convenors</li>
+                <li>Dr. Srinivasu Nookarapu, Convener, mobile- 8919788604 </li>
+                <li>Dr. Nanda Kishore Kannuri, Co-convener, mobile -9849274761</li>
+                <li>Dr. Madhuri N. V., Co-convener, mobile - 8096583928</li>
+                <li>Dr. Alok Kumar Pandey, Co-convener, mobile - 8630012390</li>
             </ul>
         </section>
     </main>
 
     <footer class="site-footer">
         <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
-        <p>For any queries, contact us at <a href="mailto:anthropology.aicp2025@uohyd.ac.in"> anthropology.aicp2025@uohyd.ac.in</a></p>
+        <p>For any queries, contact us at <a href="mailto:anthropology.aicp2025@uohyd.ac.in">anthropology.aicp2025@uohyd.ac.in</a></p>
     </footer>
 
     <script>
@@ -186,10 +215,24 @@
                 });
             });
         });
-    </script>
 
+        document.addEventListener("DOMContentLoaded", function() {
+        const tabBtns = document.querySelectorAll(".tab-btn");
+        const daySchedules = document.querySelectorAll(".day-schedule");
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+            // Remove active state from all
+            tabBtns.forEach(b => b.classList.remove("active"));
+            daySchedules.forEach(d => d.classList.remove("active"));
+
+            // Activate selected
+            btn.classList.add("active");
+            const selectedDay = btn.getAttribute("data-day");
+            document.getElementById(selectedDay).classList.add("active");
+            });
+        });
+        });
+    </script>
 </body>
 </html>
-
-
-

@@ -139,7 +139,7 @@ main { flex: 1; }
     color: #2e4751;
 }
 .banner h2 {
-    font: 38px poppins, sans-serif;
+    font: 30px poppins, sans-serif;
     color: #000000;
     font-weight: normal;
     margin: 0 0 10px;
@@ -148,10 +148,10 @@ main { flex: 1; }
     font-family: 'Mozilla Headline', sans-serif;
     font-size: 1rem;
     margin: 0 0 20px;
-    color: #000000;
+    color: #2e4751;
 }
 .banner p {
-    font: 32px poppins, sans-serif;
+    font: 20px poppins, sans-serif;
     color: #000000;
     margin: 0 0 20px;
 }
@@ -433,5 +433,6 @@ main { flex: 1; }
         margin: 20px auto;
     }
 }
+
 
 

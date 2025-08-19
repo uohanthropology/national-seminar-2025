@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Seminar Program</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo1.png" type="image/png">
+    <link rel="stylesheet" href="css/about-page.css">
+    <link rel="stylesheet" href="css/structure.css">
+    <link rel="stylesheet" href="css/colab.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <!-- Logo -->
+            <img src="images/logo1.png" alt="UoH Logo" class="nav-logo">
+
+            <!-- Text block -->
+            <div class="nav-texts">
+                <div class="uoh-text">
+                    <h1>University of Hyderabad</h1>
+                    <p>Hyderabad</p>
+                </div>
+                <div class="dept-text">
+                    <h2>Dept. of <span>Anthropology</span></h2>
+                    <p>National Conference 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Links -->
+        <div class="hamburger-menu">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">About ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="conference.html">Conference</a></li>
+                    <li><a href="committee.html">Organizing Committee</a></li>
+                    <li><a href="collaborators.html">Sponsors</a></li>
+                </ul>
+            </li>
+            <li><a href="venue.html">Venue</a></li>
+            <li><a href="callofpaper.html">Call for Paper</a></li>
+            <li><a href="registration.html" class="register-btn">Register</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="collaborators" class="collaborators-section">
+        <div class="container">
+            <h1>Collaborators</h1>
+
+            <!-- Collaborator 1 -->
+            <div class="collab-card">
+                <img src="images/igrms.png" alt="IGRMS Logo">
+                <div class="collab-content">
+                    <h2>Indira Gandhi Rashtriya Manav Sangrahalaya (IGRMS), Bhopal, INDIA</h2>
+                    <p>
+                        The Indira Gandhi Rashtriya Manav Sangrahalaya (IGRMS), located in Bhopal, Madhya Pradesh, 
+                        is a premier national museum of anthropology under the Ministry of Culture, Government of India. 
+                        Established in 1977 and spread over 200 acres of the prehistoric Shamla Hills, it is one of the 
+                        largest anthropological museums in India. IGRMS uniquely combines eight open-air exhibitions and 
+                        twelve indoor galleries, curated to depict the story of humankind across time and space, with a 
+                        special focus on India’s tribal and rural communities.
+                    </p>
+                    <p>
+                        The museum also conducts workshops, seminars, cultural festivals, artist camps, and community 
+                        engagement programs. Its reference library supports research in anthropology, archaeology, 
+                        tribal studies, museology, art, and architecture.
+                    </p>
+                    <p><strong>Prof. Amitabh Pande</strong>, Director & CEO, IGRMS, Bhopal,<br>
+                    Ministry of Culture, Government of India.</p>
+                    <p>🌐 <a href="https://igrms.org.in/" target="_blank">https://igrms.org.in/</a></p>
+                </div>
+            </div>
+
+            <!-- Collaborator 2 -->
+            <div class="collab-card">
+                <img src="images/sthreesakthi.png" alt="Sthreesakthi Logo">
+                <div class="collab-content">
+                    <h2>Sthreesakthi Private Ltd., Hyderabad</h2>
+                    <p>
+                        Sthreesakthi Private Limited is a social enterprise committed to empowering farmers, particularly 
+                        those from marginalised communities, through innovative and sustainable livelihood solutions. 
+                        Established in 2015, it emerged as an offshoot of the Hyderabad-based Gamana Voluntary Organisation, 
+                        founded by Anil Dayakar Cheruku.
+                    </p>
+                    <p>
+                        Sthreesakthi acts as a Special Purpose Vehicle (SPV) to support Farmer Producer Companies (FPCs) 
+                        across various constituencies. Its mission focuses on enabling farmers to adopt technologies in 
+                        renewable energy (like solar power) and modern agriculture (such as hydroponics).
+                    </p>
+                    <p><strong>Mr. Anil Kumar Cheruku</strong>, Chairman & MD,<br>
+                    Sthreesakthi Private Ltd., Hyderabad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
+        <p>For any queries, contact us at <a href="mailto:seminar.anthro@uoh.ac.in">seminar.anthro@uoh.ac.in</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            const navLinksArray = document.querySelectorAll('.nav-links a');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+
+                navLinksArray.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        const parent = link.parentElement;
+
+                        // If this is a dropdown parent, don't close menu
+                        if (parent.classList.contains("dropdown")) {
+                            e.preventDefault(); // stop navigation
+                            parent.classList.toggle("open"); // toggle submenu
+                        } else {
+                            navLinks.classList.remove('active'); // close menu on normal link
+                        }
+                    });
+                });
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", function (e) {
+                    // Prevent default link behavior
+                    e.preventDefault();
+
+                    // Toggle "open" class on parent <li>
+                    const parent = this.parentElement;
+                    parent.classList.toggle("open");
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -43,7 +43,7 @@ main { flex: 1; }
 .uoh-text h1 { margin: 0; font-size: 20px; font-weight: bold; }
 .uoh-text p { margin: 0; font-size: 15px; color: #ccc; }
 
-.dept-text h2 { margin: 0; font-size: 22px; font-weight: bold; color: #f5c842; }
+.dept-text h2 { margin: 0; font-size: 22px; font-weight: bold; color: #ffffff; }
 .dept-text h2 span { color: #fff; }
 .dept-text p { margin: 0; font-size: 15px; color: #ccc; }
 
@@ -116,9 +116,17 @@ main { flex: 1; }
 .dropdown-menu a:hover { background: #f2f2f2; }
 .dropdown:hover .dropdown-menu { display: block; }
 
+/* Main Title */
+.conference-heading {
+    background: linear-gradient(to right, #989360, #2e4751);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
 /* --- Content Sections --- */
 .content {
-    max-width: 800px;
+    max-width: 70%;
     margin: 40px auto;
     background: #fff;
     padding: 30px;
@@ -132,7 +140,7 @@ main { flex: 1; }
     margin-bottom: 10px;
     text-align: center;
 }
-.content p { margin-bottom: 10px; line-height: 1.6; justify-content: center; font:18px poppins, sans-serif; margin: 0 0 16px; line-height: 1.6;}
+.content p { margin-bottom: 10px; line-height: 1.6; justify-content: center; font:18px poppins, sans-serif; margin: 0 0 16px; line-height: 1.6; padding-left: 10px;}
 .content h3 { font-size: 1.3rem; color: #000000; margin: 5px 0 10px;}
 .content h2 {color: #989360;}
 .content ul {
@@ -143,7 +151,8 @@ main { flex: 1; }
 .content li {
     margin-bottom: 10px;  /* more breathing room between items */
     line-height: 1.6;     /* make lines taller for readability */
-    font: 18px poppins, sans-serif; color: #333; margin: 0 0 16px
+    font: 18px poppins, sans-serif; color: #333; margin: 0 0 16px;
+    padding-left: 10px; /* indent list items */
 }
 
 
@@ -152,7 +161,7 @@ main { flex: 1; }
 #key-focus-areas {
     max-width: 900px;
     margin: 50px auto;
-    background: #b8860b;
+    background: linear-gradient(to right, #989360, #2e4751);
     color: #fff;
     padding: 40px 30px;
     border-radius: 12px;
@@ -166,6 +175,7 @@ main { flex: 1; }
     margin-bottom: 25px;
     color: #fff;
 }
+#key-focus-areas p { font: 1.2rem poppins, sans-serif; color: #333; margin: 0 0 16px; }
 #key-focus-areas .focus-list {
     list-style: none;
     padding: 0;
@@ -234,7 +244,6 @@ main { flex: 1; }
 html, body { overflow-x: hidden; }
 nav { overflow: visible; }
 img { max-width: 100%; height: auto; display: block; }
-
 
 
 

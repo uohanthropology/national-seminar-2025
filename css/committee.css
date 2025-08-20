@@ -1,6 +1,7 @@
 /* Base styles */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* prevent horizontal scrolling */
 }
 body {
     font-family: Arial, sans-serif;
@@ -43,7 +44,7 @@ main { flex: 1; }
 .uoh-text h1 { margin: 0; font-size: 20px; font-weight: bold; }
 .uoh-text p { margin: 0; font-size: 15px; color: #ccc; }
 
-.dept-text h2 { margin: 0; font-size: 22px; font-weight: bold; color: #ffffff; }
+.dept-text h2 { margin: 0; font-size: 22px; font-weight: bold; color: #f5c842; }
 .dept-text h2 span { color: #fff; }
 .dept-text p { margin: 0; font-size: 15px; color: #ccc; }
 
@@ -111,10 +112,56 @@ main { flex: 1; }
     display: block;
     font-size: 0.95rem;
     text-decoration: none;
-    transition: background 0.9s ease;
+    transition: background 0.2s ease;
 }
 .dropdown-menu a:hover { background: #f2f2f2; }
 .dropdown:hover .dropdown-menu { display: block; }
+
+/* --- Banner --- */
+.banner {
+    background-color: #fdff8b;
+    min-height: 250px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+.banner h1 {
+    font-family: 'Mozilla Headline', sans-serif;
+    font-size: 2rem;
+    line-height: 1.4;
+    margin: 0 0 15px;
+    max-width: 900px;
+    color: #000000;
+}
+.banner h2 {
+    font-family: 'Mozilla Headline', sans-serif;
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+.banner h3 {
+    font-family: 'Mozilla Headline', sans-serif;
+    font-size: 1rem;
+    margin: 0 0 20px;
+    color: #000000;
+}
+.banner a {
+    display: inline-block;
+    background-color: #000000;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+.banner a:hover { background-color: #003366; }
 
 /* Main Title */
 .conference-heading {
@@ -126,80 +173,162 @@ main { flex: 1; }
 
 /* --- Content Sections --- */
 .content {
-    max-width: 70%;
+    max-width: 800px;
     margin: 40px auto;
     background: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    text-align: justify;
 }
 .content h1 {
     font-size: 1.8rem;
     color: #000000;
+    border-bottom: 2px solid #000000;
     margin-bottom: 10px;
-    text-align: center;
 }
-.content p { margin-bottom: 10px; line-height: 1.6; justify-content: center; font:18px poppins, sans-serif; margin: 0 0 16px; line-height: 1.6; padding-left: 10px;}
-.content h3 { font-size: 1.3rem; color: #000000; margin: 5px 0 10px;}
-.content h2 {color: #989360;}
+.content p { margin-bottom: 10px; line-height: 1.6; }
+.content h3 { font-size: 1.3rem; color: #000000; margin: 5px 0 10px; }
 .content ul {
-    padding-left: 25px;   /* restore indentation */
-    margin: 10px 0 20px;  /* add space before & after lists */
-}
-
-.content li {
-    margin-bottom: 10px;  /* more breathing room between items */
-    line-height: 1.6;     /* make lines taller for readability */
-    font: 18px poppins, sans-serif; color: #333; margin: 0 0 16px;
-    padding-left: 10px; /* indent list items */
-}
-
-
-
-/* --- Key Focus Areas --- */
-#key-focus-areas {
-    max-width: 900px;
-    margin: 50px auto;
-    background: linear-gradient(to right, #989360, #2e4751);
-    color: #fff;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    text-align: left;
-}
-#key-focus-areas h1 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 25px;
-    color: #fff;
-}
-#key-focus-areas p { font: 1.2rem poppins, sans-serif; color: #333; margin: 0 0 16px; }
-#key-focus-areas .focus-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    columns: 2;
-    column-gap: 40px;
 }
-#key-focus-areas .focus-list li {
-    margin: 10px 0;
-    padding-left: 25px;
-    position: relative;
-    font-size: 1rem;
-    color: #fff;
+.content li { margin: 5px 0; }
+
+/* --- Conference Section --- */
+.conference-section {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
 }
-#key-focus-areas .focus-list li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
+.conference-header h2 { font-size: 2rem; font-weight: bold; color: #2b2b2b; margin-bottom: 15px; }
+.conference-header p { font-size: 1rem; color: #555; margin-bottom: 40px; }
+.conference-details {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.detail-box { flex: 1; min-width: 200px; max-width: 250px; }
+.detail-box .icon { font-size: 2.5rem; color: #b8860b; margin-bottom: 10px; }
+.detail-box h3 { font-size: 1.2rem; color: #222; margin-bottom: 5px; }
+.detail-box p { font-size: 1rem; color: #444; }
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: auto;
+}
+.site-footer p { margin: 5px 0; font-size: 0.9rem; }
+.site-footer a { color: #fff; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* id  */
+#venue-info a {
+    display: inline-block;
+    background-color: #0055a5;
+    border: 2px solid #fff;
     color: #fff;
-    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
-/* Mobile */
-@media (max-width: 767px) {
+/* --- Committee Section --- */
+.committee-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.committee-section h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.committee-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Head cards (Chief Patron & Patron) */
+.committee-heads {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.head-card {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+.head-card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.head-card h3 { margin: 10px 0 5px; font: 1.1rem poppins, sans-serif;}
+.head-card p { margin: 0 0 8px; font: 0.95rem poppins, sans-serif; color: #666; }
+.head-card .role {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    background: #2e4751;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Committee lists */
+.committee-block {
+    margin-bottom: 30px;
+}
+.committee-block h2 {
+    font: 1.5rem poppins, sans-serif;
+    color: #222;
+    margin-bottom: 15px;
+}
+.committee-block h3 {
+    font: 1.2rem poppins, sans-serif;
+    margin: 15px 0 8px;
+    color: #444;
+}
+.committee-block ul {
+    padding-left: 20px;
+    
+}
+.committee-block li {
+    margin: 6px 0;
+    line-height: 1.5;
+    font: 18px poppins, sans-serif; color: #333; margin: 0 0 16px
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -218,32 +347,81 @@ main { flex: 1; }
     .nav-links.active { display: flex; }
     .hamburger-menu { display: flex; }
 
-    /* Key focus areas single column */
-    #key-focus-areas { padding: 25px 15px; }
-    #key-focus-areas h1 { font-size: 1.5rem; margin-bottom: 20px; }
-    #key-focus-areas .focus-list { columns: 1; }
-    #key-focus-areas .focus-list li { font-size: 0.95rem; }
+    .banner { padding: 20px 10px; }
+    .banner h1 { font-size: 1.1rem; line-height: 1.5; max-width: 95%; }
+    .banner a { font-size: 0.85rem; padding: 8px 12px; }
+
+    .content { margin: 15px; padding: 15px; }
+    .content {
+    word-wrap: break-word;      /* old support */
+    overflow-wrap: break-word;  /* modern support */
+    word-break: break-word;     /* fallback */
+    }
+
+    .content a, 
+    .content p, 
+    .content li {
+    white-space: normal;        /* allows wrapping */
+    overflow-wrap: anywhere;    /* breaks long text anywhere if needed */
+    }
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .dropdown-menu a { color: #050505; padding: 12px; }
+
+    .committee-section {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .committee-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .committee-heads {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .head-card {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .head-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .head-card h3 {
+        font-size: 1rem;
+    }
+
+    .head-card p {
+        font-size: 0.85rem;
+    }
+
+    .committee-block h2 {
+        font-size: 1.2rem;
+    }
+
+    .committee-block h3 {
+        font-size: 1rem;
+    }
+
+    .committee-block ul {
+        padding-left: 15px;
+    }
+
+    .committee-block li {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
 }
 
-/* --- Footer Styles --- */
-.site-footer {
-    background-color: #333;
-    color: #ccc;
-    text-align: center;
-    padding: 25px 20px;
-    margin-top: auto;
-}
-.site-footer p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-}
-.site-footer a { color: #fff; text-decoration: none; }
-.site-footer a:hover { text-decoration: underline; }
-
-/* Misc */
-html, body { overflow-x: hidden; }
-nav { overflow: visible; }
-img { max-width: 100%; height: auto; display: block; }
 
 
 

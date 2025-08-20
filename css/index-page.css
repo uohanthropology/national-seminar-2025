@@ -45,7 +45,7 @@ main { flex: 1; }
 .uoh-text h1 { margin: 0; font-size: 20px; font-weight: bold; font-family: poppins, sans-serif; }
 .uoh-text p { margin: 0; font-size: 15px; color: #ccc; font-family: poppins, sans-serif;}
 
-.dept-text h2 { margin: 0; font-size: 22px; font-weight: bold; color: #f5c842;  font-family: poppins, sans-serif;}
+.dept-text h2 { margin: 0; font-size: 22px; font-weight: bold; color: #ffffff;  font-family: poppins, sans-serif;}
 .dept-text h2 span { color: #fff; }
 .dept-text p { margin: 0; font-size: 15px; color: #ccc; font-family: poppins, sans-serif;}
 
@@ -188,11 +188,11 @@ main { flex: 1; }
 .content p { font:18px poppins, sans-serif; margin: 0 0 16px; line-height: 1.6; }
 .content h3 { font-size: 1.3rem; color: #000000; margin: 5px 0 10px; font: 18px poppins, sans-serif; }
 .content ul {
-    list-style: none;
-    padding: 0;
+    padding: 10px 20px;
     margin: 0;
 }
 .content li { margin: 5px 0; font: 18px poppins, sans-serif; color: #333; margin: 0 0 16px}
+
 
 /* --- Conference Section --- */
 .conference-section {
@@ -202,12 +202,13 @@ main { flex: 1; }
     padding: 20px;
 }
 .conference-header h2 { font-size: 2rem; font-weight: bold; color: #2b2b2b; margin-bottom: 15px; }
-.conference-header p { font-size: 1rem; color: #555; margin-bottom: 40px; }
+.conference-header p { font:18px poppins, sans-serif; margin: 0 0 16px; line-height: 1.6; }
 .conference-details {
     display: flex;
     justify-content: center;
     gap: 60px;
     flex-wrap: wrap;
+    
 }
 
 /* --- Sponsors Section --- */
@@ -221,16 +222,14 @@ main { flex: 1; }
 }
 
 #sponsers h1 {
-  font-size: inherit; /* Uses global h1 scale */
-  margin-bottom: 15px;
-  color: #2e4751;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: rem;  /* Increase size */
+  font-weight: bold;
+  color: #000000;
 }
 
-#sponsers > p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 30px;
-}
+#sponsers > p { font:18px poppins, sans-serif; margin: 0 0 16px; line-height: 1.6;}
 
 /* Flex container for sponsors */
 #sponsers .sponser-1,
@@ -264,7 +263,7 @@ main { flex: 1; }
 .detail-box { flex: 1; min-width: 200px; max-width: 250px; }
 .detail-box .icon { font-size: 2.5rem; color: #b8860b; margin-bottom: 10px; }
 .detail-box h3 { font-size: 1.2rem; color: #222; margin-bottom: 5px; }
-.detail-box p { font-size: 1rem; color: #444; }
+.detail-box p { font:18px poppins, sans-serif; margin: 0 0 16px; line-height: 1.6; }
 
 /* --- Footer --- */
 .site-footer {
@@ -294,7 +293,7 @@ main { flex: 1; }
 /* Schedule tabs */
 /* --- Schedule Section --- */
 .schedule-section {
-  max-width: 600px;
+  max-width: 50%;
   margin: 40px auto;
   text-align: center;
   padding: 20px;
@@ -303,9 +302,12 @@ main { flex: 1; }
 .schedule-section h2 {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-family: poppins, sans-serif;
+  text-align: center;
 }
+
+.schedule-section p { font:18px poppins, sans-serif; margin: 0 0 16px; line-height: 1.6; }
 
 .schedule-tabs {
   display: flex;
@@ -434,7 +436,6 @@ main { flex: 1; }
         margin: 20px auto;
     }
 }
-
 
 
 

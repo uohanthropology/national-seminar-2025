@@ -1,0 +1,136 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>University Seminar Program</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/logo1.png" type="image/png">
+        <link rel="stylesheet" href="css/index-page.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <div class="nav-left">
+                <!-- Logo -->
+                <img src="images/logo1.png" alt="UoH Logo" class="nav-logo">
+
+                <!-- Text block -->
+                <div class="nav-texts">
+                    <div class="uoh-text">
+                        <h1>University of Hyderabad</h1>
+                        <p>Hyderabad</p>
+                    </div>
+                    <div class="dept-text">
+                        <h2>Dept. of <span>Anthropology</span></h2>
+                        <p>National Conference 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="hamburger-menu">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="conference.html">Conference</a></li>
+                        <li><a href="committee.html">Organizing Committee</a></li>
+                        <li><a href="collaborators.html">Sponsors</a></li>
+                    </ul>
+                </li>
+                <li><a href="venue.html">Venue</a></li>
+                <li><a href="callofpaper.html">Call for Paper</a></li>
+                <li><a href="registration.html" class="register-btn">Register</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+             <section id="outcomes" class="content">
+                <h1><strong>Contact Us</strong></h1>
+                <ul>
+                    <li>anthropology.aicp2025@uohyd.ac.in</li>
+                    <li>srinivasu.nookarapu@uohyd.ac.in</li>
+                    <li><strong>Website: </strong>https://uohanthropology.github.io/national-seminar-2025/index.html</li>
+                </ul><br>
+                <ul>
+                    <li>Dr. Srinivasu Nookarapu, Convener, mobile- 8919788604 </li>
+                    <li>Dr. Nanda Kishore Kannuri, Co-convener, mobile -9849274761</li>
+                    <li>Dr. Madhuri N. V., Co-convener, mobile - 8096583928</li>
+                    <li>Dr. Alok Kumar Pandey, Co-convener, mobile - 8630012390</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
+            <p>For any queries, contact us at <a href="mailto:anthropology.aicp2025@uohyd.ac.in">anthropology.aicp2025@uohyd.ac.in</a></p>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const hamburger = document.querySelector('.hamburger-menu');
+                const navLinks = document.querySelector('.nav-links');
+                const navLinksArray = document.querySelectorAll('.nav-links a');
+
+                if (hamburger && navLinks) {
+                    hamburger.addEventListener('click', () => {
+                        navLinks.classList.toggle('active');
+                    });
+
+                    navLinksArray.forEach(link => {
+                        link.addEventListener('click', (e) => {
+                            const parent = link.parentElement;
+
+                            // If this is a dropdown parent, don't close menu
+                            if (parent.classList.contains("dropdown")) {
+                                e.preventDefault(); // stop navigation
+                                parent.classList.toggle("open"); // toggle submenu
+                            } else {
+                                navLinks.classList.remove('active'); // close menu on normal link
+                            }
+                        });
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+                dropdownLinks.forEach(link => {
+                    link.addEventListener("click", function (e) {
+                        // Prevent default link behavior
+                        e.preventDefault();
+
+                        // Toggle "open" class on parent <li>
+                        const parent = this.parentElement;
+                        parent.classList.toggle("open");
+                    });
+                });
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+            const tabBtns = document.querySelectorAll(".tab-btn");
+            const daySchedules = document.querySelectorAll(".day-schedule");
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                // Remove active state from all
+                tabBtns.forEach(b => b.classList.remove("active"));
+                daySchedules.forEach(d => d.classList.remove("active"));
+
+                // Activate selected
+                btn.classList.add("active");
+                const selectedDay = btn.getAttribute("data-day");
+                document.getElementById(selectedDay).classList.add("active");
+                });
+            });
+            });
+        </script>
+    </body>
+    </html>

@@ -36,13 +36,13 @@
 
 .structure-card h3 {
     font-size: 1.25rem;
-    color: #989360;
+    color: #333;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .structure-card p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #666;
     line-height: 1.5;
 }
@@ -64,7 +64,7 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 25px;
-    color: #989360;
+    color: #fff;
 }
 
 #key-focus-areas .focus-list {
@@ -89,7 +89,7 @@
     left: 0;
     color: #fff;
     font-weight: bold;
-}
+} 
 
 /* Ensure the layout is responsive on smaller screens */
 @media (max-width: 768px) {
@@ -106,7 +106,6 @@
     #key-focus-areas h1 {
         font-size: 1.5rem;
         margin-bottom: 20px;
-        color: #989360;
     }
 
     #key-focus-areas .focus-list {
@@ -117,4 +116,3 @@
         font-size: 0.95rem;
     }
 }
-

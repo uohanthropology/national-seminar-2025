@@ -44,7 +44,7 @@ main { flex: 1; }
 .uoh-text h1 { margin: 0; font-size: 20px; font-weight: bold; }
 .uoh-text p { margin: 0; font-size: 15px; color: #ccc; }
 
-.dept-text h2 { margin: 0; font-size: 22px; font-weight: bold; color: #f5c842; }
+.dept-text h2 { margin: 0; font-size: 22px; font-weight: bold; color: #ffffff; }
 .dept-text h2 span { color: #fff; }
 .dept-text p { margin: 0; font-size: 15px; color: #ccc; }
 
@@ -60,7 +60,7 @@ main { flex: 1; }
     color: white;
     text-decoration: none;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 17px;
     padding: 8px 12px;
     transition: color 0.3s;
 }
@@ -177,6 +177,7 @@ main { flex: 1; }
     color: #000000;
     border-bottom: 2px solid #000000;
     margin-bottom: 10px;
+    text-align: center;
 }
 .content p { margin-bottom: 10px; line-height: 1.6; }
 .content h3 { font-size: 1.3rem; color: #000000; margin: 5px 0 10px; }
@@ -337,5 +338,4 @@ main { flex: 1; }
     }
     .dropdown-menu a { color: #050505; padding: 12px; }
 }
-
 

@@ -277,8 +277,8 @@ main { flex: 1; }
     box-shadow: 0 3px 8px rgba(0,0,0,0.05);
 }
 .head-card img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
@@ -413,6 +413,7 @@ main { flex: 1; }
         line-height: 1.4;
     }
 }
+
 
 
 

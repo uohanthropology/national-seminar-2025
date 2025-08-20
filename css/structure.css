@@ -51,7 +51,7 @@
 #key-focus-areas {
     max-width: 900px;
     margin: 50px auto;
-    background: #b8860b;  /* golden brown background like screenshot */
+    background: linear-gradient(to right, #989360, #2e4751);  /* golden brown background like screenshot */
     color: #fff;
     padding: 40px 30px;
     border-radius: 12px;
@@ -116,3 +116,4 @@
         font-size: 0.95rem;
     }
 }
+

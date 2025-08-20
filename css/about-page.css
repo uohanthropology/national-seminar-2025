@@ -128,7 +128,7 @@ main { flex: 1; }
 }
 .content h1 {
     font-size: 1.8rem;
-    color: #989360;
+    color: #000000;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -234,6 +234,7 @@ main { flex: 1; }
 html, body { overflow-x: hidden; }
 nav { overflow: visible; }
 img { max-width: 100%; height: auto; display: block; }
+
 
 
 

@@ -1,0 +1,181 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>University Seminar Program</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/logo1.png" type="image/png">
+        <link rel="stylesheet" href="css/bv.sharma.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <div class="nav-left">
+                <!-- Logo -->
+                <img src="images/logo1.png" alt="UoH Logo" class="nav-logo">
+
+                <!-- Text block -->
+                <div class="nav-texts">
+                    <div class="uoh-text">
+                        <h1>University of Hyderabad</h1>
+                        <p>Hyderabad</p>
+                    </div>
+                    <div class="dept-text">
+                        <h2>Dept. of <span>Anthropology</span></h2>
+                        <p>National Conference 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="hamburger-menu">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="bv.sharma.html">About Prof.B.V.Sharma</a></li>
+                        <li><a href="conference.html">Conference</a></li>
+                        <li><a href="committee.html">Organizing Committee</a></li>
+                        <li><a href="collaborators.html">Sponsors</a></li>
+                    </ul>
+                </li>
+                <li><a href="venue.html">Venue</a></li>
+                <li><a href="callofpaper.html">Call for Papers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="alumini.html">Alumni Meet</a></li>
+                <li><a href="registration.html" class="register-btn">Register</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <section class="content">
+                
+                <section id="profile" class="profile-section">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                        <img src="images/BV.Sharma.jpg" alt="Prof. B. V. Sharma">
+                        </div>
+                        <div class="profile-content">
+                        <h1><strong>Prof. B. V. Sharma</strong></h1>
+                        <p>
+                            Prof. BV Sharma is one of the distinguished scholars in anthropology in India. He is especially 
+                            recognized for his contributions in the fields of medical and applied anthropology in India. 
+                            He is currently the Director of the Anthropological Survey of India (AnSI). Before joining 
+                            AnSI as its Director, Prof. Sharma served as Professor at the Department of Anthropology, 
+                            University of Hyderabad, for about 30 years.
+                        </p>
+                        <p>
+                            He was given a full additional charge as Director General of the Raja Ram Mohan Roy Library 
+                            Foundation (RRLF) under the Ministry of Culture, Government of India, during 2023-2024. 
+                            Prof. Sharma recently served as Chairperson of the Sikkim State High Level Committee that 
+                            was constituted for the preparation of comprehensive reports for the inclusion of 12 ethnic 
+                            communities of Sikkim in the list of Scheduled Tribes. He served as a member of the Advisor 
+                            committee for the Tribal Museum in the Rashtrapati Bhavan and a member of the advisor 
+                            committee for the 6500 crore Marine Heritage Museum being built at Lothal, Gujarat.
+                        </p>
+                        <p>
+                            Prof BV Sharma’s administrative leadership at the University of Hyderabad has been exemplary. 
+                            His positions include: Director of the Centre for Integrated Studies, Head of the Department 
+                            of Anthropology, Dean of Student Welfare, Coordinator of the Alumni Cell, and Deputy Chief Warden.  
+                            These and several other roles he held during his illustrious career emphasize his exceptional 
+                            leadership in promoting anthropological research and advancing academic and cultural heritages.
+                        </p>
+                        <p>
+                            Prof. BV Sharma’s academic qualifications include a Ph.D. in Anthropology (1992) and an 
+                            M.Phil. in Anthropology (1984) from the University of Hyderabad, complemented by an M.Sc. 
+                            in Anthropology from the University of Poona (1982). His research expertise spans Social Anthropology, 
+                            Medical Anthropology, Applied Anthropology, and Tribal Development, in which he has made significant 
+                            scholarly contributions. 
+                        </p>
+                        <p>
+                            Throughout his prolific career, Prof. BV Sharma has authored articles in international and national 
+                            journals and published six books. He also guided many doctoral students, and successfully executed 
+                            several research projects funded by many International and National organizations of repute. 
+                            His doctoral students now hold leadership roles in many organisations and institutions of high repute.  
+                        </p>
+                        <p>This conference celebrates Prof BV Sharma’s exemplary academic accomplishments, transformative leadership, and enduring commitment to advancing anthropological knowledge and social development in India.</p>
+                        <p>
+                            🔗 For more details, you may visit <a href="https://sites.google.com/view/bv-sharma/home?pli=1" target="_blank">"https://sites.google.com/view/bv-sharma/home?pli=1"</a>
+                        </p>
+                        </div>
+                    </div>
+                </section>
+
+
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Department of Anthropology, University of Hyderabad. All Rights Reserved | Designed by <a href="https://www.linkedin.com/in/kattoju-prashanth-999908229/" target="_blank" rel="noopener">Prashanth</a></p>
+            <p>For any queries, contact us at <a href="mailto:anthropology.aicp2025@uohyd.ac.in">anthropology.aicp2025@uohyd.ac.in</a></p>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const hamburger = document.querySelector('.hamburger-menu');
+                const navLinks = document.querySelector('.nav-links');
+                const navLinksArray = document.querySelectorAll('.nav-links a');
+
+                if (hamburger && navLinks) {
+                    hamburger.addEventListener('click', () => {
+                        navLinks.classList.toggle('active');
+                    });
+
+                    navLinksArray.forEach(link => {
+                        link.addEventListener('click', (e) => {
+                            const parent = link.parentElement;
+
+                            // If this is a dropdown parent, don't close menu
+                            if (parent.classList.contains("dropdown")) {
+                                e.preventDefault(); // stop navigation
+                                parent.classList.toggle("open"); // toggle submenu
+                            } else {
+                                navLinks.classList.remove('active'); // close menu on normal link
+                            }
+                        });
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+                dropdownLinks.forEach(link => {
+                    link.addEventListener("click", function (e) {
+                        // Prevent default link behavior
+                        e.preventDefault();
+
+                        // Toggle "open" class on parent <li>
+                        const parent = this.parentElement;
+                        parent.classList.toggle("open");
+                    });
+                });
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+            const tabBtns = document.querySelectorAll(".tab-btn");
+            const daySchedules = document.querySelectorAll(".day-schedule");
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                // Remove active state from all
+                tabBtns.forEach(b => b.classList.remove("active"));
+                daySchedules.forEach(d => d.classList.remove("active"));
+
+                // Activate selected
+                btn.classList.add("active");
+                const selectedDay = btn.getAttribute("data-day");
+                document.getElementById(selectedDay).classList.add("active");
+                });
+            });
+            });
+        </script>
+    </body>
+    </html>

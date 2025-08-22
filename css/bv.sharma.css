@@ -504,31 +504,59 @@ main { flex: 1; }
         margin: 20px auto;
     }
 
+    /* Content area */
+    .content {
+        margin: 15px;
+        padding: 15px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* Profile Section */
     .profile-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px;
-    gap: 15px;
-  }
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+    .profile-image img {
+        width: 90%;
+        max-width: 280px;   /* prevent oversized image */
+        margin-bottom: 15px;
+    }
+    .profile-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .profile-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: left;   /* ✅ easier to read on phones */
+    }
 
-  .profile-image img {
-    margin: 0 auto 15px;
-    width: 180px;       /* Slightly smaller for phones */
-    max-width: 80%;     /* Prevents overflow */
-    height: auto;       /* Keep aspect ratio */
-    border-radius: 12px;
-  }
+    /* Schedule Tabs */
+    .schedule-section {
+        max-width: 95%;
+        padding: 10px;
+    }
+    .schedule-tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .tab-btn {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
 
-  .profile-content {
-    font-size: 0.95rem; /* Slightly smaller text */
-    line-height: 1.5;
-  }
-
-  .profile-content h2 {
-    font-size: 1.3rem;  /* Title resize */
-    margin-bottom: 10px;
-  }
+    /* Sponsors */
+    #sponsers .sponser-1,
+    #sponsers .sponser-2 {
+        display: block;
+        margin: 20px auto;
+    }
 }
+
 
 
 

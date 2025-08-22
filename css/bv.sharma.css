@@ -439,18 +439,7 @@ main { flex: 1; }
   text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .profile-card {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .profile-image img {
-    margin: 0 auto 20px;
-    width: 200px;
-  }
-}
 
 
 
@@ -514,7 +503,33 @@ main { flex: 1; }
         display: block;
         margin: 20px auto;
     }
+
+    .profile-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .profile-image img {
+    margin: 0 auto 15px;
+    width: 180px;       /* Slightly smaller for phones */
+    max-width: 80%;     /* Prevents overflow */
+    height: auto;       /* Keep aspect ratio */
+    border-radius: 12px;
+  }
+
+  .profile-content {
+    font-size: 0.95rem; /* Slightly smaller text */
+    line-height: 1.5;
+  }
+
+  .profile-content h2 {
+    font-size: 1.3rem;  /* Title resize */
+    margin-bottom: 10px;
+  }
 }
+
 
 
 

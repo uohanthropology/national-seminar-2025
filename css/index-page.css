@@ -374,6 +374,61 @@ main { flex: 1; }
   color: #333;
 }
 
+/* --- Key Focus Areas --- */
+#key-focus-areas {
+    max-width: 800px;
+    margin: 30px auto;
+    background: linear-gradient(to right, #989360, #2e4751);
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: left;
+}
+#key-focus-areas h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #fff;
+}
+#key-focus-areas p { font: 1.2rem poppins, sans-serif; color: #333; margin: 0 0 16px; }
+#key-focus-areas .focus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 2;
+    column-gap: 40px;
+}
+#key-focus-areas .focus-list li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1rem;
+    color: #fff;
+}
+#key-focus-areas .focus-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.content table th, .content table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
 
 
 /* --- Responsive --- */
@@ -435,8 +490,25 @@ main { flex: 1; }
         display: block;
         margin: 20px auto;
     }
-}
 
+    /* Key focus areas single column */
+    #key-focus-areas { padding: 25px 15px; }
+    #key-focus-areas h1 { font-size: 1.5rem; margin-bottom: 20px; }
+    #key-focus-areas .focus-list { columns: 1; }
+    #key-focus-areas .focus-list li { font-size: 0.95rem; }
+
+    .content table {
+        width: 100%;
+        margin-top: 15px;
+        border: 1px solid #ddd;
+    }
+
+    .content table th, .content table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+}
 
 
 

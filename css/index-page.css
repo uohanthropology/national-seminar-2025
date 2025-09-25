@@ -532,6 +532,10 @@ main { flex: 1; }
     font-size: 14px;
     padding: 12px;
   }
+    .day-schedule.active {
+    padding: 10px 20px;  /* allow horizontal scroll if needed */
+    overflow-x: auto;
+  }
     #sponsers .sponser-1,
     #sponsers .sponser-2 {
         display: block;
@@ -556,6 +560,7 @@ main { flex: 1; }
     }
 
 }
+
 
 
 
